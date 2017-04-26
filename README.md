@@ -1,5 +1,6 @@
-<p><strong><font size="5">Thor IntellisenseX</font></strong></p>
-<p><font size="4"><strong>Introduction</strong></font></p>
+# Thor IntellisenseX
+
+## Introduction
 <p><em>IntellisenseX</em> refers to a suite of Thor Tools that provide functionality similar to native Intellisense. These tools display lists of available variable names, field names, or members (properties, events, methods, and objects) while you type code, just like Intellisense. However, they cover those areas that Intellisense forgot (such as the list of field names in a table when editing in a code window) and provide new capabilities, available through customization, such as displaying the list of field names in an SQL table, as shown below</p>
 <p><img style="margin: 0px; padding-left: 0px; padding-right: 0px; display: inline; padding-top: 0px; border-width: 0px;"  src="Thor%20IntellisenseX%20Examples_SNAGHTMLf871ea8.png" width="697" height="304" border="0" /></p>
 <p><a name="Videos"></a></p>
@@ -17,9 +18,11 @@
 <li><a href="http://www.youtube.com/watch?v=71psd6RH2Ls&amp;hd=1&amp;rel=0">&ldquo;IntellisenseX by Dot&rdquo; vs &ldquo;IntellisenseX by Hot Key&rdquo;</a> (3:29)</li>
 <li><a href="http://www.youtube.com/watch?v=UGyqlInAfvc&amp;hd=1&amp;rel=0">Managing Plug-Ins: OpenTable and Intellisense</a><font color="#ff0000"><font color="#000000"> (5:34)</font> </font></li>
 </ol>
-<p><font size="4"><strong>Installation Instructions</strong></font></p>
+
+## Installation Instructions
 <p>IntellisenseX is downloaded and installed as part of the Check For Updates process for <a href="http://github.com/VFPX/Thor"> Thor</a>.</p>
-<p><font size="4"><strong>Thor Tools</strong></font></p>
+
+## Thor Tools
 <p>IntellisenseX is implemented through the use of four tools:</p>
 <ul>
 <li><strong>IntellisenseX by Dot</strong> is the main tool. Once executed, IntellisenseX is activated any time you press a period (dot), the same as for native Intellisense. The tool is actually a toggle. If you execute it a second time, the On Key Label is removed, and typing a dot simply works like normal. (Unfortunately, there is an undesirable side effect to this technique of executing code when you press a dot, which is why you may want to turn off Intellisense by Dot from time to time. See <a href="Thor%20Intellisense%20Dot%20Glitch.md"> glitch when using Intellisense by Dot</a>. )</li>
@@ -29,7 +32,9 @@
 </ul>
 <p>Like all Thor tools, these tools can be executed in a number of different ways, such as by using the Tool Launcher, as shown below, or by user-assigned hot keys.</p>
 <p><img style="margin: 0px; padding-left: 0px; padding-right: 0px; display: inline; padding-top: 0px; border-width: 0px;"  src="Thor%20IntellisenseX%20Examples_image_4.png" width="356" height="207" border="0" /></a></p>
-<p><font size="4"><strong><font size="4"><strong>Examples of IntellisenseX</strong></font></strong></font></p>
+
+## Examples of IntellisenseX
+
 <p>Unless otherwise noted, all examples provided are enabled by a single execution of the tool &ldquo;IntellisenseX by dot&rdquo;.</p>
 <p><a name="top"></a></p>
 <p>The following is a summary of the different types of dropdown lists available:</p>
