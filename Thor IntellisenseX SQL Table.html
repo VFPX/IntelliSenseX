@@ -1,0 +1,11 @@
+<div class="wikidoc">
+<p><font size="5">Thor IntellisenseX for SQL Tables</font></p>
+<p>IntellisenseX can be used to display the fields in SQL tables, although doing so requires customization on your part.</p>
+<p>The sample below accesses a table from a SQL server database:</p>
+<p><a href="http://download-codeplex.sec.s-msft.com/Download?ProjectName=vfpx&DownloadId=471963"><img title="SNAGHTMLbe1d5e2" border="0" alt="SNAGHTMLbe1d5e2" src="http://download-codeplex.sec.s-msft.com/Download?ProjectName=vfpx&DownloadId=471964" width="523" height="372" style="border-right-width:0px; padding-left:0px; padding-right:0px; display:inline; border-top-width:0px; border-bottom-width:0px; border-left-width:0px; padding-top:0px"></a></p>
+<p>Customization is achieved by modifying a Plug-in PRG. </p>
+<p>The Plug-In is called when IntellisenseX has exhausted all other possible interpretations of the text before the dot. In this example, it is called with “soheader” as a parameter, and the Plug-In is free to determine the list of items to appear in the dropdown.
+ In particular, it can use SQLColumns to determine the fields in the table or read the list of fields from a data dictionary.</p>
+<p>See <a href="http://vfpx.codeplex.com/wikipage?title=Thor%20IntellisenseX%20Implicit%20Tables">
+plug-in PRG for handling names that may be of SQL tables or data objects</a>.</p>
+</div><div class="ClearBoth"></div>

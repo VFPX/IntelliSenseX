@@ -1,0 +1,149 @@
+<div class="wikidoc">
+<p><font size="4"><strong>Introduction</strong></font></p>
+<p><em>IntellisenseX</em> refers to a suite of Thor Tools that provide functionality similar to native Intellisense. These tools display lists of available variable names, field names, or members (properties, events, methods, and objects) while you type code,
+ just like Intellisense. However, they cover those areas that Intellisense forgot (such as the list of field names in a table when editing in a code window) and provide new capabilities, available through customization, such as displaying the list of field
+ names in an SQL table, as shown below</p>
+<p><a href="http://download-codeplex.sec.s-msft.com/Download?ProjectName=vfpx&DownloadId=483186"><img title="SNAGHTMLf871ea8" border="0" alt="SNAGHTMLf871ea8" src="http://download-codeplex.sec.s-msft.com/Download?ProjectName=vfpx&DownloadId=483187" width="697" height="304" style="border-right-width:0px; padding-left:0px; padding-right:0px; display:inline; border-top-width:0px; border-bottom-width:0px; border-left-width:0px; padding-top:0px"></a></p>
+<p><font size="4"><strong>Videos</strong></font></p>
+<ul>
+<li><font color="#ff0000">Introduction and examples (planned)</font> </li><li><font color="#ff0000">Customization (planned)</font> </li></ul>
+<p><font size="4"><strong>Installation Instructions</strong></font></p>
+<p>IntellisenseX is downloaded as part of the <a href="http://vfpx.codeplex.com/wikipage?title=Thor%20One-Cick%20Update">
+Check For Updates</a> process for <a href="http://vfpx.codeplex.com/wikipage?title=Thor">
+Thor</a>. </p>
+<p><font size="4"><strong>Thor Tools</strong></font></p>
+<p>IntellisenseX is implemented through the use of four tools:</p>
+<ul>
+<li><strong>IntellisenseX by Dot</strong> is the main tool. Once executed, IntellisenseX is activated any time you press a period (dot), the same as for native Intellisense. The tool is actually a toggle. If you execute it a second time, the On Key Label is
+ removed, and typing a dot simply works like normal. Unfortunately, there is an undesirable side effect to this technique. See
+<a href="http://vfpx.codeplex.com/wikipage?title=Thor%20Intellisense%20Dot%20Glitch">
+glitch when using Intellisense by Dot</a>. </li><li><strong>IntellisenseX by Hot Key</strong> is the twin of <strong>IntellisenseX by Dot</strong>, except that it is activated differently, by using a hot key (which you define in Thor) instead of a dot. To activate the tool, press the hot key
+<u>after</u> you press the dot. This tool is available because of a <a href="http://vfpx.codeplex.com/wikipage?title=Thor%20Intellisense%20Dot%20Glitch">
+glitch when using Intellisense by Dot</a>. </li><li><strong>Dropdown Variables List</strong> provides a list of local variables for those who do not use MDot (m.)
+</li><li><strong>Dropdown Constants List</strong> provides a list of constants (created by #Define and #Include)</li></ul>
+<p>Like all Thor tools, these tools can be executed in a number of different ways, such as by using the Tool Launcher, as shown here, or by user-assigned hot keys.</p>
+<p><a href="http://download-codeplex.sec.s-msft.com/Download?ProjectName=vfpx&DownloadId=482633"><img title="image" border="0" alt="image" src="http://download-codeplex.sec.s-msft.com/Download?ProjectName=vfpx&DownloadId=482634" width="356" height="207" style="border-right-width:0px; padding-left:0px; padding-right:0px; display:inline; border-top-width:0px; border-bottom-width:0px; border-left-width:0px; padding-top:0px"></a></p>
+<p><font size="4"><strong><font size="4"><strong>Examples of IntellisenseX</strong></font></strong></font></p>
+<p>Unless otherwise noted, all examples provided are enabled by a single execution of the tool “IntellisenseX by dot”.</p>
+<a name="top"></a>
+<p>The following is a summary of the different types of dropdown lists available:</p>
+<p>Variables (local and otherwise):</p>
+<ul>
+<li><a href="#SampleMDot">Variables from MDot.</a> </li><li><a href="#SampleHotKeyLocals">Variables using a hot key.</a> </li></ul>
+<p>Field names: </p>
+<ul>
+<li><a href="#SampleFieldsFromTable">Fields from an open table (or view).</a> </li><li><a href="#SampleFieldsFromClosedTable">Fields from an table that is not open (but is in the path).</a>
+</li><li><a href="#SampleFieldsSelectAlias">Fields from a local_alias in an SQL statement.</a>
+</li><li><a href="#SampleFieldsSQL">Fields from a SQL Server table</a> </li><li><a href="#SampleFieldsDataObject">Fields from a Data Object</a> </li></ul>
+<ul>
+</ul>
+<p>Property and Method names (PEMs) from objects: </p>
+<ul>
+<li><a href="#SampleFieldsBetweenWith">PEMs for objects referenced between WITH / ENDWITH</a>
+</li><li><a href="#SampleFieldsPRGClasses">PEMS referenced in PRG-based classes</a> </li></ul>
+<p>Other: </p>
+<ul>
+<li><a href="#SampleObjectReference">Indirect object references</a> </li><li><a href="#SampleAliasReferences">*#Alias directive for tables and objects</a>
+</li><li><a href="#SampleConstants">Listing Constants (created by #Define and #Include)</a>
+</li><li><a href="#SamplePEMEditor">Setting ControlSources in PEM Editor</a> </li></ul>
+<p>Usage notes; customizing the dropdown listbox</p>
+<hr>
+<h3><a name="SampleMDot">Variables (local and otherwise) from MDot</a></h3>
+<p>Typing &quot;m&quot; and then a dot (period) will drop down a list of all variables in a procedure or method that are local, private, public, or are assigned values anywhere in the procedure.
+</p>
+<p><a href="http://download-codeplex.sec.s-msft.com/Download?ProjectName=vfpx&DownloadId=482606"><img title="image" border="0" alt="image" src="http://download-codeplex.sec.s-msft.com/Download?ProjectName=vfpx&DownloadId=482607" width="691" height="322" style="border-right-width:0px; padding-left:0px; padding-right:0px; display:inline; border-top-width:0px; border-bottom-width:0px; border-left-width:0px; padding-top:0px"></a></p>
+<a href="#top">Back to top</a>
+<hr>
+<h3><a name="SampleHotKeyLocals">Variables (local and otherwise) using a hot key</a></h3>
+<p>For those who do not use M-Dot notation, the same list of all variables in a procedure or method that are local, private, public, or are assigned values anywhere in the procedure.&nbsp; can be obtained by a hot key. (This hot key is selectable in Thor).
+<strong><font color="#ff0000">See also another section about keying first, then using hot key.</font></strong></p>
+<p><a href="http://download-codeplex.sec.s-msft.com/Download?ProjectName=vfpx&DownloadId=482608"><img title="SNAGHTML64ada77" border="0" alt="SNAGHTML64ada77" src="http://download-codeplex.sec.s-msft.com/Download?ProjectName=vfpx&DownloadId=482609" width="695" height="296" style="border-right-width:0px; margin:0px; padding-left:0px; padding-right:0px; display:inline; border-top-width:0px; border-bottom-width:0px; border-left-width:0px; padding-top:0px"></a></p>
+<a href="#top">Back to top</a>
+<hr>
+<h3><a name="SampleFieldsFromTable">Fields from an open table (or view)</a></h3>
+<p>If a table (or view) is open, the dropdown list shows the list of fields as well as their data type and field width.</p>
+<p><a href="http://download-codeplex.sec.s-msft.com/Download?ProjectName=vfpx&DownloadId=482618"><img title="SNAGHTML655319b" border="0" alt="SNAGHTML655319b" src="http://download-codeplex.sec.s-msft.com/Download?ProjectName=vfpx&DownloadId=482619" width="697" height="304" style="border-right-width:0px; padding-left:0px; padding-right:0px; display:inline; border-top-width:0px; border-bottom-width:0px; border-left-width:0px; padding-top:0px"></a></p>
+<a href="#top">Back to top</a>
+<hr>
+<h3><a name="SampleFieldsFromClosedTable">Fields from an table that is not open (but is in the path)</a></h3>
+<p>If the alias for the table is not in use, the path is searched for a DBF of that name; if found. the table is opened and its fields are listed.
+<font color="#ff0000"><strong>Insert text here for a different algorithm for opening tables &#43; link</strong></font></p>
+<p><a href="http://download-codeplex.sec.s-msft.com/Download?ProjectName=vfpx&DownloadId=482620"><img title="SNAGHTML65a1036" border="0" alt="SNAGHTML65a1036" src="http://download-codeplex.sec.s-msft.com/Download?ProjectName=vfpx&DownloadId=482621" width="697" height="304" style="border-right-width:0px; padding-left:0px; padding-right:0px; display:inline; border-top-width:0px; border-bottom-width:0px; border-left-width:0px; padding-top:0px"></a></p>
+<a href="#top">Back to top</a>
+<hr>
+<h3><a name="SampleFieldsSelectAlias">Fields from a local_alias in an SQL statement</a></h3>
+<p>If a local_alias is used in an SQL statement, the fields from the actual table (or alias) are shown. This does not apply to sub-queries (yet).</p>
+<p><a href="http://download-codeplex.sec.s-msft.com/Download?ProjectName=vfpx&DownloadId=482622"><img title="SNAGHTML664d1b1" border="0" alt="SNAGHTML664d1b1" src="http://download-codeplex.sec.s-msft.com/Download?ProjectName=vfpx&DownloadId=482623" width="697" height="304" style="border-right-width:0px; padding-left:0px; padding-right:0px; display:inline; border-top-width:0px; border-bottom-width:0px; border-left-width:0px; padding-top:0px"></a></p>
+<a href="#top">Back to top</a>
+<hr>
+<h3><a name="SampleFieldsSQL">Fields from a SQL Server table</a></h3>
+<p>The fields from an SQL Server table (“soheader” in the example below) can be displayed. This requires customization of a plug-in PRG (managed by Thor) that accesses the structure of the table. This can be done a few different ways, including using SQLColumns()
+ or accessing a dictionary of the fields and in an SQL database. <font color="#ff0000">
+<strong>Insert text here &#43; link</strong></font></p>
+<p><a href="http://download-codeplex.sec.s-msft.com/Download?ProjectName=vfpx&DownloadId=483189"><img title="SNAGHTMLf871ea8" border="0" alt="SNAGHTMLf871ea8" src="http://download-codeplex.sec.s-msft.com/Download?ProjectName=vfpx&DownloadId=483190" width="697" height="304" style="border-right-width:0px; padding-left:0px; padding-right:0px; display:inline; border-top-width:0px; border-bottom-width:0px; border-left-width:0px; padding-top:0px"></a></p>
+<a href="#top">Back to top</a>
+<hr>
+<h3><a name="SampleFieldsDataObject">Fields from a Data Object </a></h3>
+<p>IntellisenseX can be used to display the fields from data objects that are based on an underlying table in a business object or in a form or visual class based on an underlying table, although doing so requires customization on your part.
+</p>
+<p>The sample below accesses the underlying table that the current class is based on (found in “This.cAlias”) whenever “This.oData.” is entered.
+</p>
+<p>&nbsp;<font color="#ff0000"><strong>Insert text here &#43; link</strong></font></p>
+<p><a href="http://download-codeplex.sec.s-msft.com/Download?ProjectName=vfpx&DownloadId=482783"><img title="image" border="0" alt="image" src="http://download-codeplex.sec.s-msft.com/Download?ProjectName=vfpx&DownloadId=482784" width="697" height="301" style="border-right-width:0px; padding-left:0px; padding-right:0px; display:inline; border-top-width:0px; border-bottom-width:0px; border-left-width:0px; padding-top:0px"></a></p>
+<a href="#top">Back to top</a>
+<hr>
+<h3><a name="SampleFieldsBetweenWith">PEMs for objects referenced between WITH / ENDWITH</a></h3>
+<p>When using a “WITH” phrase (“With loObject”), if you do not use “as” (“With loObject
+<strong>as</strong> Textbox”), the only object for which FoxPro provides Intellisense in methods for visual classes is THIS:
+</p>
+<p><a href="http://download-codeplex.sec.s-msft.com/Download?ProjectName=vfpx&DownloadId=483387"><img title="SNAGHTML130f05dd" border="0" alt="SNAGHTML130f05dd" src="http://download-codeplex.sec.s-msft.com/Download?ProjectName=vfpx&DownloadId=483388" width="701" height="302" style="border-right-width:0px; padding-left:0px; padding-right:0px; display:inline; border-top-width:0px; border-bottom-width:0px; border-left-width:0px; padding-top:0px"></a></p>
+<p>This feels like an incomplete implementation, as there are a number of other objects for which it would seem that Intellisense would work:</p>
+<ul>
+<li>With ThisForm </li><li>With This.Parent </li><li>With This.Parent.cboMaintTable </li><li>With Thisform.PageFrame.Pages[1]</li></ul>
+<p>These are all provided for by IntellisenseX, as shown in the following image:</p>
+<p><a href="http://download-codeplex.sec.s-msft.com/Download?ProjectName=vfpx&DownloadId=483389"><img title="SNAGHTML13106da4" border="0" alt="SNAGHTML13106da4" src="http://download-codeplex.sec.s-msft.com/Download?ProjectName=vfpx&DownloadId=483390" width="701" height="302" style="border-right-width:0px; padding-left:0px; padding-right:0px; display:inline; border-top-width:0px; border-bottom-width:0px; border-left-width:0px; padding-top:0px"></a></p>
+<p>Note as well the parameters list that appears in the second column. Once you have selected a method from the listbox, pressing Ctrl&#43;Enter will insert both the method name and parameters into your code.</p>
+<p>In addition, IntellisenseX also recognizes a number of other references to objects that follow WITH: see
+<a href="#SampleFieldsDataObject">Fields from a Data Object</a>, <a href="#SampleObjectReference">
+Indirect object references</a>, and <a href="#SampleAliasReferences">*#Alias directive for tables and objects</a>.</p>
+<p><a href="http://download-codeplex.sec.s-msft.com/Download?ProjectName=vfpx&DownloadId=483391"><img title="SNAGHTML131db30d" border="0" alt="SNAGHTML131db30d" src="http://download-codeplex.sec.s-msft.com/Download?ProjectName=vfpx&DownloadId=483392" width="701" height="302" style="border-right-width:0px; padding-left:0px; padding-right:0px; display:inline; border-top-width:0px; border-bottom-width:0px; border-left-width:0px; padding-top:0px"></a></p>
+<a href="#top">Back to top</a>
+<hr>
+<h3><a name="SampleFieldsPRGClasses">PEMS referenced in PRG-based classes</a></h3>
+<p>FoxPro provides Intellisense for THIS in PRG-based classes in a limited way: it might not show custom properties or methods in the class being edited at all (as shown below), if it does will not display them in the same case as they are defined, and the
+ list is not updated as new properties or methods are added.</p>
+<p><a href="http://download-codeplex.sec.s-msft.com/Download?ProjectName=vfpx&DownloadId=483568"><img title="SNAGHTML143d7097" border="0" alt="SNAGHTML143d7097" src="http://download-codeplex.sec.s-msft.com/Download?ProjectName=vfpx&DownloadId=483569" width="702" height="303" style="border-bottom:0px; border-left:0px; padding-left:0px; padding-right:0px; display:inline; border-top:0px; border-right:0px; padding-top:0px"></a></p>
+<p>IntellisenseX provides an alternative that shows <u>only</u> the properties and methods defined in the current class (no inherited or native properties or methods, unless defined in the class), in their correct case. This list is always current as properties
+ or methods are added. (Depending on interest, this list may be extended to include inherited properties and methods.)</p>
+<p>This feature is disabled by default; to enable it, see <strong><font color="#ff0000">Insert link here.</font></strong></p>
+<p><a href="http://download-codeplex.sec.s-msft.com/Download?ProjectName=vfpx&DownloadId=483570"><img title="SNAGHTML14521dc7" border="0" alt="SNAGHTML14521dc7" src="http://download-codeplex.sec.s-msft.com/Download?ProjectName=vfpx&DownloadId=483571" width="702" height="303" style="border-bottom:0px; border-left:0px; padding-left:0px; padding-right:0px; display:inline; border-top:0px; border-right:0px; padding-top:0px"></a></p>
+<a href="#top">Back to top</a>
+<hr>
+<h3><a name="SampleObjectReference">Indirect object references</a></h3>
+<p>IntellisenseX recognizes the use of variables that are assigned as objects in code, as shown below. The objects referenced may be either objects in the form or class, or a
+<a href="#SampleFieldsDataObject">Data Object</a>.</p>
+<p><a href="http://download-codeplex.sec.s-msft.com/Download?ProjectName=vfpx&DownloadId=483572"><img title="SNAGHTML145a23a1" border="0" alt="SNAGHTML145a23a1" src="http://download-codeplex.sec.s-msft.com/Download?ProjectName=vfpx&DownloadId=483573" width="699" height="304" style="border-bottom:0px; border-left:0px; padding-left:0px; padding-right:0px; display:inline; border-top:0px; border-right:0px; padding-top:0px"></a></p>
+<a href="#top">Back to top</a>
+<hr>
+<h3><a name="SampleAliasReferences">*#Alias directive for tables and objects</a></h3>
+<p>It may happen that a variable (that actually refers to a specific object) or alias (that actually refers to a specific table) is not defined in code in such a way the one can tell what it refers to, even if the developer knows exactly what it refers to.
+ In this case the <font face="Courier New">*#Alias</font> directive can be used to inform Intellisense how to interpret the variable or alias.</p>
+<p>In the example below, the second line informs Intellisense that the variable toData actually refers to the object ThisForm.grdGrid, so that referring to toData later in the code displays the dropdown list of properties and methods for that grid. This works
+ for form objects (as in the example), <a href="#SampleFieldsDataObject">Data Objects</a>, and aliases.</p>
+<p><a href="http://download-codeplex.sec.s-msft.com/Download?ProjectName=vfpx&DownloadId=483574"><img title="SNAGHTML14653608" border="0" alt="SNAGHTML14653608" src="http://download-codeplex.sec.s-msft.com/Download?ProjectName=vfpx&DownloadId=483575" width="698" height="302" style="border-bottom:0px; border-left:0px; padding-left:0px; padding-right:0px; display:inline; border-top:0px; border-right:0px; padding-top:0px"></a></p>
+<a href="#top">Back to top</a>
+<hr>
+<h3><a name="SampleConstants">Listing Constants (created by #Define and #Include)</a></h3>
+<p>The Thor tool <strong>Dropdown Constants List</strong> creates a dropdown list of all #Define’d constants. This list is created using the same code as is used by ZDEF, which traverses all #Include files as well. The second column in the display shows the
+ value of each constant.</p>
+<p><a href="http://download-codeplex.sec.s-msft.com/Download?ProjectName=vfpx&DownloadId=483576"><img title="SNAGHTML14745903" border="0" alt="SNAGHTML14745903" src="http://download-codeplex.sec.s-msft.com/Download?ProjectName=vfpx&DownloadId=483577" width="701" height="302" style="border-bottom:0px; border-left:0px; padding-left:0px; padding-right:0px; display:inline; border-top:0px; border-right:0px; padding-top:0px"></a></p>
+<a href="#top">Back to top</a>
+<hr>
+<h3><a name="SamplePEMEditor">Setting ControlSources in PEM Editor</a></h3>
+<p><font color="#ff0000"><strong></strong></font></p>
+<p>PEM Editor has been enhanced to recognize most of the IntellisenseX capabilities described here when entering a ControlSource. It will recognize:</p>
+<ul>
+<li>Object references (Thisform, e.g., as shown below) </li><li>Table or alias references (PartsList) </li><li><a href="#SampleFieldsDataObject">Data Objects</a> (This.oData)</li></ul>
+<p>Note that if you set the ControlSource to a property of Thisform that does not exist, you will be asked if you want it to be created.</p>
+<p><a href="http://download-codeplex.sec.s-msft.com/Download?ProjectName=vfpx&DownloadId=483578"><img title="SNAGHTML147a41fa" border="0" alt="SNAGHTML147a41fa" src="http://download-codeplex.sec.s-msft.com/Download?ProjectName=vfpx&DownloadId=483579" width="706" height="298" style="border-bottom:0px; border-left:0px; padding-left:0px; padding-right:0px; display:inline; border-top:0px; border-right:0px; padding-top:0px"></a></p>
+<a href="#top">Back to top</a></div><div class="ClearBoth"></div>
