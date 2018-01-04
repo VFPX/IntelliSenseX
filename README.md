@@ -14,7 +14,7 @@
 <li><font color="#ff0000"><a href="http://bit.ly/P73dWr">Variables (LOCAL and otherwise) list</a>&nbsp;</font><font color="#000000">(5:28) </font></li>
 <li><font color="#ff0000"><a href="http://bit.ly/SmM9fA">Constants (#Defines) list</a>&nbsp;</font><font color="#000000">(3:18) </font></li>
 <li><font color="#ff0000"><a href="http://bit.ly/Rj9zpQ">Setting ControlSource in PEM Editor</a></font><font color="#000000"> (2:25)</font></li>
-<li><font color="#ff0000"><a href="http://bit.ly/SRSzE6">Known issues</a></font><font color="#000000"> (7:00)</font></li>
+<li><font color="#ff0000"><a href="https://www.youtube.com/watch?v=6x9BraGybXY">Known issues</a></font><font color="#000000"> (7:00)</font></li>
 <li><a href="http://www.youtube.com/watch?v=71psd6RH2Ls&amp;hd=1&amp;rel=0">&ldquo;IntellisenseX by Dot&rdquo; vs &ldquo;IntellisenseX by Hot Key&rdquo;</a> (3:29)</li>
 <li><a href="http://www.youtube.com/watch?v=UGyqlInAfvc&amp;hd=1&amp;rel=0">Managing Plug-Ins: OpenTable and Intellisense</a><font color="#ff0000"><font color="#000000"> (5:34)</font> </font></li>
 </ol>
