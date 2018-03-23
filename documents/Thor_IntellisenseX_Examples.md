@@ -115,8 +115,9 @@ If a local_alias is used in an SQL statement, the fields from the actual table (
 
 ### <a name="SampleFieldsSQL">Fields from a SQL Server table</a>
 
-The fields from an SQL Server table (“soheader” in the example below) can be displayed. This requires customization of a plug-in PRG (managed by Thor) that accesses the structure of the table. This can be done a few different ways, including using SQLColumns() or accessing a dictionary of the fields and in an SQL database. <font color="#ff0000">**Insert text here + link**</font>
-<!-- TBleken -->
+The fields from an SQL Server table (“soheader” in the example below) can be displayed. This requires customization of a plug-in PRG (managed by Thor) that accesses the structure of the table. This can be done a few different ways, including using SQLColumns() or accessing a dictionary of the fields and in an SQL database. 
+[See Thor plug-in OpenTable](https://github.com/VFPX/Thor/blob/master/Docs/Thor_add_plugins.md#opentable)
+
 
 ![](images/thor_intellisensex_examples_snaghtmlf871ea8.png)
 
@@ -174,8 +175,6 @@ FoxPro provides Intellisense for THIS in PRG-based classes in a limited way: it 
 IntellisenseX provides an alternative that shows ***only*** the properties and methods defined in the current class (no inherited or native properties or methods, unless defined in the class), in their correct case. This list is always current as properties or methods are added. (Depending on interest, this list may be extended to include inherited properties and methods.)
 
 This feature is disabled by default; to enable it, see [SamplePRGClasses](Thor_IntellisenseX_Configuration_Options.md#SamplePRGClasses)
-**<font color="#ff0000">Insert link here.</font>**  
-<!-- Tbleken Thor_IntellisenseX_Configuration_Options.md  #SamplePRGClasses     -->
 
 ![](images/thor_intellisensex_examples_snaghtml14521dc7.png)
 
