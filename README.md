@@ -27,8 +27,8 @@ IntellisenseX is downloaded and installed as part of the Check For Updates proce
 
 ## Thor Tools
 IntellisenseX is implemented through the use of four tools:
-* **IntellisenseX by Dot** is the main tool. Once executed, IntellisenseX is activated any time you press a period (dot), the same as for native Intellisense. The tool is actually a toggle. If you execute it a second time, the On Key Label is removed, and typing a dot simply works like normal. (Unfortunately, there is an undesirable side effect to this technique of executing code when you press a dot, which is why you may want to turn off Intellisense by Dot from time to time. See [glitch when using Intellisense by Dot](documents\Thor_IntellisenseX_Dot_Glitch.md) glitch when using Intellisense by Dot. )
-* **IntellisenseX by Hot Key** is the twin of **IntellisenseX by Dot**, except that it is activated differently, by using a hot key (which you define in Thor) instead of a dot. To activate the tool, press the hot key ***after*** you press the dot. This tool is available because of the [glitch when using Intellisense by Dot](documents\Thor_IntellisenseX_Dot_Glitch.md).</li>
+* **IntellisenseX by Dot** is the main tool. Once executed, IntellisenseX is activated any time you press a period (dot), the same as for native Intellisense. The tool is actually a toggle. If you execute it a second time, the On Key Label is removed, and typing a dot simply works like normal. (Unfortunately, there is an undesirable side effect to this technique of executing code when you press a dot, which is why you may want to turn off Intellisense by Dot from time to time. See [glitch when using Intellisense by Dot](documents/Thor_IntellisenseX_Dot_Glitch.md) glitch when using Intellisense by Dot. )
+* **IntellisenseX by Hot Key** is the twin of **IntellisenseX by Dot**, except that it is activated differently, by using a hot key (which you define in Thor) instead of a dot. To activate the tool, press the hot key ***after*** you press the dot. This tool is available because of the [glitch when using Intellisense by Dot](documents/Thor_IntellisenseX_Dot_Glitch.md).</li>
 * **Dropdown Variables List** provides a list of local variables for those who do not use MDot (m.)
 * **Dropdown Constants List** provides a list of constants (created by #Define and #Include)
 
@@ -69,8 +69,8 @@ Other:
 * [Listing Constants (created by #Define and #Include)](#SampleConstants)
 * [Setting ControlSources in PEM Editor](#SamplePEMEditor)
 
-[Configuration Options](documents\Thor_IntellisenseX_Configuration_Options.md)
-[Customization](documents\Thor_IntellisenseX_Customization.md)
+[Configuration Options](documents/Thor_IntellisenseX_Configuration_Options.md)
+[Customization](documents/Thor_IntellisenseX_Customization.md)
 --- 
 
 ### <a name="SampleFieldsFromTable"></a>Fields from an open table (or view)
@@ -140,7 +140,7 @@ FoxPro provides Intellisense for THIS in PRG-based classes in a limited way: it 
 
 ![](documents/images/Thor_IntellisenseX_Examples_SNAGHTML143d7097.png)
 IntellisenseX provides an alternative that shows ***only*** the properties and methods defined in the current class (no inherited or native properties or methods, unless defined in the class), in their correct case. This list is always current as properties or methods are added. (Depending on interest, this list may be extended to include inherited properties and methods.)  
-This feature is disabled by default; to enable it, see [Configuration Options](documents\Thor_IntellisenseX_Configuration_Options.md#SamplePRGClasses).
+This feature is disabled by default; to enable it, see [Configuration Options](documents/Thor_IntellisenseX_Configuration_Options.md#SamplePRGClasses).
 
 ![](documents/images/Thor_IntellisenseX_Examples_SNAGHTML14521dc7.png)
 [Back to top](#top)
@@ -165,13 +165,13 @@ Typing "m" and then a dot (period) will drop down a list of all variables in a p
 [Back to top](#top)
 ---
 ### <a name="SampleHotKeyLocals"></a>Variables (local and otherwise) using a hot key
-For those who do not use M-Dot notation, the same list of all variables in a procedure or method that are local, private, public, or are assigned values anywhere in the procedure. can be obtained by a hot key. (This hot key is selectable in Thor). See also [Auto-completion on single match](documents\Thor_IntellisenseX_Configuration_Options.md#SampleIfOne).
+For those who do not use M-Dot notation, the same list of all variables in a procedure or method that are local, private, public, or are assigned values anywhere in the procedure. can be obtained by a hot key. (This hot key is selectable in Thor). See also [Auto-completion on single match](documents/Thor_IntellisenseX_Configuration_Options.md#SampleIfOne).
 
 ![](documents/images/Thor_IntellisenseX_Examples_SNAGHTML64ada77_1.png)
 [Back to top](#top)
 ---
 ### <a name="SampleConstants"></a>Listing Constants (created by #Define and #Include)
-The Thor tool **Dropdown Constants List** creates a dropdown list of all #Define'd constants. This list is created using the same code as is used by ZDEF, which traverses all #Include files. The second column in the display shows the value of each constant. (Note that "match anywhere" applies to the this second column as well.) See also [Auto-completion on single match](documents\Thor_IntellisenseX_Configuration_Options.md#SampleIfOne).
+The Thor tool **Dropdown Constants List** creates a dropdown list of all #Define'd constants. This list is created using the same code as is used by ZDEF, which traverses all #Include files. The second column in the display shows the value of each constant. (Note that "match anywhere" applies to the this second column as well.) See also [Auto-completion on single match](documents/Thor_IntellisenseX_Configuration_Options.md#SampleIfOne).
 
 ![](documents/images/Thor_IntellisenseX_Examples_SNAGHTML14745903.png)
 [Back to top](#top)
@@ -190,12 +190,12 @@ Note that if you set the ControlSource to a property of Thisform that does not e
 #### Customization
 There are three areas of customization available:
 
-* Settings in the [Thor configuration form](documents\Thor_IntellisenseX_Configuration.md)
-* A [plug-in PRG for opening tables](documents\Thor_IntellisenseX_Open_Table_PlugIn.md) based on their name
-* A [plug-in PRG for handling names that may be of SQL tables or data objects](documents\Thor_IntellisenseX_Implicit_Tables.md)
+* Settings in the [Thor configuration form](documents/Thor_IntellisenseX_Configuration.md)
+* A [plug-in PRG for opening tables](documents/Thor_IntellisenseX_Open_Table_PlugIn.md) based on their name
+* A [plug-in PRG for handling names that may be of SQL tables or data objects](documents/Thor_IntellisenseX_Implicit_Tables.md)
 
 #### Using the IntellisenseX dropdown
-The dropdown listbox from IntellisenseX is designed to work like the dropdown from native FoxPro Intellisense, as much as that is possible, but there are differences. [See description.](documents\Thor_IntellisenseX_Using_Dropdown.md)
+The dropdown listbox from IntellisenseX is designed to work like the dropdown from native FoxPro Intellisense, as much as that is possible, but there are differences. [See description.](documents/Thor_IntellisenseX_Using_Dropdown.md)
 #### Acknowledgements
 IntellisenseX is built on ISX.PRG, written by Christof Wollenhaupt (and a host of others) from 1999-2010. The concept of extending Intellisense began with ISX.PRG and even after modifying it to fit within Thor and extending it to some new areas, the vast majority of code from ISX.PRG remains unchanged. Thanks so much to Christof (and the others) for providing such a worthy tool as a starting place.  
 Thanks also to Matt Slay for asking the right question at the right time to get this project started.
