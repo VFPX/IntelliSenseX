@@ -1,7 +1,7 @@
 # Thor IntellisenseX
 
 ## Introduction
-**IntellisenseX** refers to a suite of Thor Tools that provide functionality similar to native Intellisense. These tools display lists of available variable names, field names, or members (properties, events, methods, and objects) while you type code, just like Intellisense. However, they cover those areas that Intellisense forgot (such as the list of field names in a table when editing in a code window) and provide new capabilities, available through customization, such as displaying the list of field names in an SQL table, as shown below</p>
+**IntellisenseX** refers to a suite of Thor Tools that provide functionality similar to native Intellisense. These tools display lists of available variable names, field names, or members (properties, events, methods, and objects) while you type code, just like Intellisense. However, they cover those areas that Intellisense forgot (such as the list of field names in a table when editing in a code window) and provide new capabilities, available through customization, such as displaying the list of field names in an SQL table, as shown below
 
 
 ![](documents/images/thor_intellisensex_examples_snaghtmlf871ea8.png)
@@ -98,7 +98,7 @@ If a local_alias is used in an SQL statement, the fields from the actual table (
 [Back to top](#top)
 ---
 ### <a name="SampleFieldsSQL"></a>Fields from a SQL Server table
-The fields from an SQL Server table ("soheader"&rdquo;" in the example below) can be displayed. This requires customization of a plug-in PRG (managed by Thor) that accesses the structure of the table. This can be done a few different ways, including using SQLColumns() or accessing a dictionary of the fields and in an SQL database.
+The fields from an SQL Server table ("soheader" in the example below) can be displayed. This requires customization of a plug-in PRG (managed by Thor) that accesses the structure of the table. This can be done a few different ways, including using SQLColumns() or accessing a dictionary of the fields and in an SQL database.
 This feature is ***only*** available if you do some customization so that you can return to Intellisense a list of field names associated with a given SQL table name ("soheader" in the example). See the Intellisense PRG in [Thor Plug-In Prgs](https://github.com/VFPX/Thor/blob/master/Docs/Thor_add_plugins.md).
 
 ![](documents/images/Thor_IntellisenseX_Examples_SNAGHTMLf871ea8.png)
