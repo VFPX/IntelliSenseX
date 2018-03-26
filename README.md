@@ -14,7 +14,7 @@
 3. [Fields from tables](http://www.youtube.com/watch?v=lPmFwa4WeJ8&amp;hd=1&amp;rel=0) (9:29)
 4. [Properties and methods from objects](http://www.youtube.com/watch?v=9TUvouhSU6Y&amp;hd=1&amp;rel=0) (5:14)
 5. [Indirect table and object references and the Alias directive](http://www.youtube.com/watch?v=4lv4FoU2XEA&amp;hd=1&amp;rel=0) (3:51)
-6. [http://bit.ly/P73dWr](Variables (LOCAL and otherwise) list) (5:28)
+6. [Variables (LOCAL and otherwise) list](http://bit.ly/P73dWr) (5:28)
 7. [Constants (#Defines) list](http://bit.ly/SmM9fA) (3:18)
 8. [Setting ControlSource in PEM Editor](http://bit.ly/Rj9zpQ) (2:25)
 9. [Known issues](https://www.youtube.com/watch?v=6x9BraGybXY) (7:00)
@@ -109,7 +109,9 @@ This feature is ***only*** available if you do some customization so that you ca
 IntellisenseX can be used to display the fields from data objects that are based on an underlying table in a business object or in a form or visual class based on an underlying table, although doing so requires customization on your part.
 The sample below accesses the underlying table that the current class is based on (found in "This.cAlias") whenever "This.oData." is entered.
 This feature is ***only*** available if you do some customization so that Intellisense can associate a code snippet("This.odata" in the example) with a table alias ("MasterPartsList"). See the Intellisense PRG in [Thor Plug-In Prgs](https://github.com/VFPX/Thor/blob/master/Docs/Thor_add_plugins.md).
+
 ![](documents/images/Thor_IntellisenseX_Examples_image_8.png)
+
 [Back to top](#top)
 ---
 ### <a name="SampleFieldsBetweenWith"></a>PEMs for objects referenced between WITH / ENDWITH

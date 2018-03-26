@@ -17,8 +17,8 @@ IntellisenseX is downloaded as part of the [Check For Updates](https://github.co
 
 IntellisenseX is implemented through the use of four tools:
 
-*   **IntellisenseX by Dot** is the main tool. Once executed, IntellisenseX is activated any time you press a period (dot), the same as for native Intellisense. The tool is actually a toggle. If you execute it a second time, the On Key Label is removed, and typing a dot simply works like normal. Unfortunately, there is an undesirable side effect to this technique. See [glitch when using Intellisense by Dot](Thor_Intellisense_Dot_Glitch.md).
-*   **IntellisenseX by Hot Key** is the twin of **IntellisenseX by Dot**, except that it is activated differently, by using a hot key (which you define in Thor) instead of a dot. To activate the tool, press the hot key <u>after</u> you press the dot. This tool is available because of a [glitch when using Intellisense by Dot](Thor_Intellisense_Dot_Glitch.md).
+*   **IntellisenseX by Dot** is the main tool. Once executed, IntellisenseX is activated any time you press a period (dot), the same as for native Intellisense. The tool is actually a toggle. If you execute it a second time, the On Key Label is removed, and typing a dot simply works like normal. Unfortunately, there is an undesirable side effect to this technique. See [glitch when using Intellisense by Dot](Thor_IntellisenseX_Dot_Glitch.md).
+*   **IntellisenseX by Hot Key** is the twin of **IntellisenseX by Dot**, except that it is activated differently, by using a hot key (which you define in Thor) instead of a dot. To activate the tool, press the hot key ***after*** you press the dot. This tool is available because of a [glitch when using Intellisense by Dot](Thor_IntellisenseX_Dot_Glitch.md).
 *   **Dropdown Variables List** provides a list of local variables for those who do not use MDot (m.)
 *   **Dropdown Constants List** provides a list of constants (created by #Define and #Include)
 
