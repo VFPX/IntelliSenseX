@@ -34,7 +34,7 @@ IntellisenseX is implemented through the use of four tools:
 
 Like all Thor tools, these tools can be executed in a number of different ways, such as by using the Tool Launcher, as shown below, or by user-assigned hot keys.
 
-![](documents/images/Thor_IntellisenseX_Examples_image_4.png)
+![](documents/images/thor_intellisensex_examples_image_4.png)
 
 ## Examples of IntellisenseX
 
@@ -86,7 +86,7 @@ If the alias for the table is not in use, the path is searched for a DBF of that
 This particular algorithm for opening tables might not be sufficient for your needs (you might, for instance, open tables from a folder not in the path during development). If so, you can customize the way that tables are opened; see the OpenTable PRG in [Thor plug-in Prgs.](https://github.com/VFPX/Thor/blob/master/Docs/Thor_add_plugins.md).
 
 
-![](documents/images/Thor_IntellisenseX_Examples_SNAGHTML65a1036.png)
+![](documents/images/thor_intellisensex_examples_snaghtml65a1036.png)
 [Back to top](#top)
 
 ---
@@ -101,7 +101,7 @@ If a local_alias is used in an SQL statement, the fields from the actual table (
 The fields from an SQL Server table ("soheader" in the example below) can be displayed. This requires customization of a plug-in PRG (managed by Thor) that accesses the structure of the table. This can be done a few different ways, including using SQLColumns() or accessing a dictionary of the fields and in an SQL database.
 This feature is ***only*** available if you do some customization so that you can return to Intellisense a list of field names associated with a given SQL table name ("soheader" in the example). See the Intellisense PRG in [Thor Plug-In Prgs](https://github.com/VFPX/Thor/blob/master/Docs/Thor_add_plugins.md).
 
-![](documents/images/Thor_IntellisenseX_Examples_SNAGHTMLf871ea8.png)
+![](documents/images/thor_intellisensex_examples_snaghtmlf871ea8.png)
 
 [Back to top](#top)
 ---
@@ -110,14 +110,14 @@ IntellisenseX can be used to display the fields from data objects that are based
 The sample below accesses the underlying table that the current class is based on (found in "This.cAlias") whenever "This.oData." is entered.
 This feature is ***only*** available if you do some customization so that Intellisense can associate a code snippet("This.odata" in the example) with a table alias ("MasterPartsList"). See the Intellisense PRG in [Thor Plug-In Prgs](https://github.com/VFPX/Thor/blob/master/Docs/Thor_add_plugins.md).
 
-![](documents/images/Thor_IntellisenseX_Examples_image_8.png)
+![](documents/images/thor_intellisensex_examples_image_8.png)
 
 [Back to top](#top)
 ---
 ### <a name="SampleFieldsBetweenWith"></a>PEMs for objects referenced between WITH / ENDWITH
 When using a "WITH" phrase ("With loObject"), if you do not use "as" ("With loObject **as** Textbox"), the only object for which FoxPro provides Intellisense in methods for visual classes is THIS:
 
-![](documents/images/Thor_IntellisenseX_Examples_SNAGHTML130f05dd.png)
+![](documents/images/thor_intellisensex_examples_snaghtml130f05dd.png)
 
 This feels like an incomplete implementation, as there are a number of other objects for which it would seem that Intellisense would work:
 
@@ -128,52 +128,52 @@ This feels like an incomplete implementation, as there are a number of other obj
 
 These are all provided for by IntellisenseX, as shown in the following image:
 
-![](documents/images/Thor_IntellisenseX_Examples_SNAGHTML13106da4.png)
+![](documents/images/thor_intellisensex_examples_snaghtml13106da4.png)
 Note as well the parameters list that appears in the second column. Once you have selected a method from the listbox, pressing Ctrl+Enter will insert both the method name and parameters into your code.  
 In addition, IntellisenseX also recognizes a number of other references to objects that follow WITH: see [Fields from a Data Object](#SampleFieldsDataObject), [Indirect object references](#SampleObjectReference), and [#Alias directive for tables and objects](#SampleAliasReferences).
 
-![](documents/images/Thor_IntellisenseX_Examples_SNAGHTML131db30d.png)
+![](documents/images/thor_intellisensex_examples_snaghtml131db30d.png)
 [Back to top](#top)
 ---
 ### <a name="SampleFieldsPRGClasses"></a>PEMS referenced in PRG-based classes
 FoxPro provides Intellisense for THIS in PRG-based classes in a limited way: it might not show custom properties or methods in the class being edited at all (as shown below), if it does will not display them in the same case as they are defined, and the list is not updated as new properties or methods are added.
 
-![](documents/images/Thor_IntellisenseX_Examples_SNAGHTML143d7097.png)
+![](documents/images/thor_intellisensex_examples_snaghtml143d7097.png)
 IntellisenseX provides an alternative that shows ***only*** the properties and methods defined in the current class (no inherited or native properties or methods, unless defined in the class), in their correct case. This list is always current as properties or methods are added. (Depending on interest, this list may be extended to include inherited properties and methods.)  
 This feature is disabled by default; to enable it, see [Configuration Options](documents/Thor_IntellisenseX_Configuration_Options.md#SamplePRGClasses).
 
-![](documents/images/Thor_IntellisenseX_Examples_SNAGHTML14521dc7.png)
+![](documents/images/thor_intellisensex_examples_snaghtml14521dc7.png)
 [Back to top](#top)
 ---
 ### <a name="SampleObjectReference"></a>Indirect object references
 IntellisenseX recognizes the use of variables that are assigned as objects in code, as shown below. The objects referenced may be either objects in the form or class, or a [Data Object](#SampleFieldsDataObject).
 
-![](documents/images/Thor_IntellisenseX_Examples_SNAGHTML145a23a1.png)
+![](documents/images/thor_intellisensex_examples_snaghtml145a23a1.png)
 [Back to top](#top)
 ---
 ### <a name="SampleAliasReferences"></a>*#Alias directive for tables and objects
 It may happen that a variable (that actually refers to a specific object) or alias (that actually refers to a specific table) is not defined in code in such a way the one can tell what it refers to, even if the developer knows exactly what it refers to. In this case the **#Alias** directive can be used to inform Intellisense how to interpret the variable or alias.  
 In the example below, the second line informs Intellisense that the variable toData actually refers to the object ThisForm.grdGrid, so that referring to toData later in the code displays the dropdown list of properties and methods for that grid. This works for form objects (as in the example), [Data Objects](#SampleFieldsDataObject), and aliases.
 
-![](documents/images/Thor_IntellisenseX_Examples_SNAGHTML14653608.png)
+![](documents/images/thor_intellisensex_examples_snaghtml14653608.png)
 [Back to top](#top)
 ---
 ### <a name="SampleMDot"></a>Variables (local and otherwise) from MDot
 Typing "m" and then a dot (period) will drop down a list of all variables in a procedure or method that are local, private, public, or are assigned values anywhere in the procedure (even after the current line of code).
 
-![](documents/images/Thor_IntellisenseX_Examples_image_2.png)
+![](documents/images/thor_intellisensex_examples_image_2.png)
 [Back to top](#top)
 ---
 ### <a name="SampleHotKeyLocals"></a>Variables (local and otherwise) using a hot key
 For those who do not use M-Dot notation, the same list of all variables in a procedure or method that are local, private, public, or are assigned values anywhere in the procedure. can be obtained by a hot key. (This hot key is selectable in Thor). See also [Auto-completion on single match](documents/Thor_IntellisenseX_Configuration_Options.md#SampleIfOne).
 
-![](documents/images/Thor_IntellisenseX_Examples_SNAGHTML64ada77_1.png)
+![](documents/images/thor_intellisensex_examples_snaghtml64ada77_1.png)
 [Back to top](#top)
 ---
 ### <a name="SampleConstants"></a>Listing Constants (created by #Define and #Include)
 The Thor tool **Dropdown Constants List** creates a dropdown list of all #Define'd constants. This list is created using the same code as is used by ZDEF, which traverses all #Include files. The second column in the display shows the value of each constant. (Note that "match anywhere" applies to the this second column as well.) See also [Auto-completion on single match](documents/Thor_IntellisenseX_Configuration_Options.md#SampleIfOne).
 
-![](documents/images/Thor_IntellisenseX_Examples_SNAGHTML14745903.png)
+![](documents/images/thor_intellisensex_examples_snaghtml14745903.png)
 [Back to top](#top)
 ---
 ### <a name="SamplePEMEditor"></a>Setting ControlSources in PEM Editor
@@ -185,7 +185,7 @@ PEM Editor has been enhanced to recognize most of the IntellisenseX capabilities
 
 Note that if you set the ControlSource to a property of Thisform that does not exist, you will be asked if you want it to be created.
 
-![](documents/images/Thor_IntellisenseX_Examples_SNAGHTML147a41fa.png)
+![](documents/images/thor_intellisensex_examples_snaghtml147a41fa.png)
 [Back to top](#top)
 #### Customization
 There are three areas of customization available:

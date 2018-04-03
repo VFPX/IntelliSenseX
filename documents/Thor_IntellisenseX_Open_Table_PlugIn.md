@@ -2,11 +2,11 @@
 
 Thor provides a number of Plug-In PRGs to alter or enhance the behaviors of some of the Thor Tools. You can create or edit Plug-Ins by using the Manage Plug-Ins menu item in the Thor menu:
 
-![](images/Thor_IntellisenseX_Open_Table_PlugIn_image_2.png)
+![](images/thor_intellisensex_for_open_table_image_2.png)
 
 The Plug-In used by IntellisenseX to open tables is also used by a number of other tools, as shown below.
 
-![](images/Thor_IntellisenseX_Open_Table_PlugIn_SNAGHTMLaee7c2a.png)
+![](images/thor_intellisensex_open_table_plugin_snaghtmlaee7c2a.png)
 
 The default behavior of OpenTable is to try to USE the table (which will work if the table name is in the path) or, if not found, look for the table in the MRU list for DBFs. If this behavior does not meet your needs, click Edit to create your own local copy of the PRG which you can edit as necessary.
 

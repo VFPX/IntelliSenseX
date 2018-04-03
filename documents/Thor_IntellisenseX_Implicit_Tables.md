@@ -6,7 +6,7 @@ Thor provides a number of Plug-In PRGs to alter or enhance the behaviors of some
 
 The Plug-In called “IntellisenseX” is called by IntellisenseX after it has exhausted all other interpretations of what precedes the dot.
 
-![](images/Thor_IntellisenseX_Implicit_Tables_SNAGHTMLb02026a.png)
+![](images/thor_intellisensex_implicit_tables_snaghtmlb02026a.png)
 
 There is a single object passed in as a parameter and a number of properties from that object contain values of use within the PRG. They are described in the comments in the sample PRG supplied when you click the action ‘Create’, and include the text to the left of the just-entered dot (called ‘lcEntityName’) and also an object reference to the current form or class being edited.
 
