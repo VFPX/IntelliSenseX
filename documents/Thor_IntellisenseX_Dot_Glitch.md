@@ -8,7 +8,7 @@ There are at least two reports of difficulties encountered:
 * If you have a native FoxPro Intellisense dropdown list already and you press a dot, something else goes wrong:
 In the example below, native Intellisense has displayed the list of members for Thisform, and after ‘gr’ has been entered, highlights the match to a grid named ‘GrdGrid’.
 
-![](images/thor_intellisense_DOT_glitch_image_2.png)
+![](images/thor_intellisense_dot_glitch_image_2.png)
 
 The normal behavior for Intellisense is that when you now enter a period (dot), the entire name ‘GrdGrid’ is entered into your code window followed by the dot. We have done this so often that it is reflexive behavior.
 
