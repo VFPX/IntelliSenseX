@@ -1,8 +1,8 @@
 lparameters toUpdateObject
 
 with toUpdateObject
-	.VersionNumber    = '1.24 - 20230120'
-	.AvailableVersion = 'IntellisenseX-1.24-update-20230120'
+	.VersionNumber    = '1.24 - 20230123'
+	.AvailableVersion = 'IntellisenseX-1.24-update-20230123'
 	.Component        = 'Yes'
 	.Notes            = GetNotes()
 endwith
