@@ -1,5 +1,9 @@
 # Thor IntellisenseX
 
+Version 1.24 Released 2023-01-27
+
+[What's new in this release](Change%20Log.md)
+
 ## Introduction
 **IntellisenseX** refers to a suite of Thor Tools that provide functionality similar to native Intellisense. These tools display lists of available variable names, field names, or members (properties, events, methods, and objects) while you type code, just like Intellisense. However, they cover those areas that Intellisense forgot (such as the list of field names in a table when editing in a code window) and provide new capabilities, available through customization, such as displaying the list of field names in an SQL table, as shown below
 
@@ -198,4 +202,14 @@ There are three areas of customization available:
 The dropdown listbox from IntellisenseX is designed to work like the dropdown from native FoxPro Intellisense, as much as that is possible, but there are differences. [See description.](documents/Thor_IntellisenseX_Using_Dropdown.md)
 #### Acknowledgements
 IntellisenseX is built on ISX.PRG, written by Christof Wollenhaupt (and a host of others) from 1999-2010. The concept of extending Intellisense began with ISX.PRG and even after modifying it to fit within Thor and extending it to some new areas, the vast majority of code from ISX.PRG remains unchanged. Thanks so much to Christof (and the others) for providing such a worthy tool as a starting place.  
+
 Thanks also to Matt Slay for asking the right question at the right time to get this project started.
+
+[What's new in this release](Change%20Log.md)
+
+----
+## Helping with this project
+See [How to contribute to IntellisenseX](.github/CONTRIBUTING.md) for details on how to help with this project.
+
+Last changed: _2023-01-27_ ![Picture](./docs/images/vfpxpoweredby_alternative.gif)
+
