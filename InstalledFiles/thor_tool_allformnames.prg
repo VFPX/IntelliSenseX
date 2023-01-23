@@ -12,11 +12,11 @@ If Pcount() = 1								;
 	With m.lxParam1
 
 		* Required
-		.Prompt		   = 'Dropdown Reports in Active Project'
+		.Prompt		   = 'Dropdown Form Names in Active Project'
 
 		* Optional
 		Text To .Description Noshow && a description for the tool
-Dropdown list of all reports in the Active Project
+Dropdown list of all Form Names in the Active Project
 
 Based on ISX.Prg by Christof
 		Endtext
@@ -29,7 +29,7 @@ Based on ISX.Prg by Christof
 
 		* For public tools, such as PEM Editor, etc.
 		.Author			= 'Christof Wollenhaupt (enhancements for Thor by Jim Nelson)'
-		.Link	   = 'https://github.com/VFPX/IntelliSenseX/blob/master/documents/Tool_Dropdown_Reports.md'
+		.Link	   = 'https://github.com/VFPX/IntelliSenseX/blob/master/documents/Tool_Dropdown_Forms.md'
 		.OptionTool		= 'IntellisenseX'
 		.OnKeyLabelOnly	= .T.
 
@@ -64,7 +64,7 @@ Procedure ToolCode
 
 	Select  Padr(Cleanse(Name), 80)			;
 		From (m.lcAlias)					;
-		Where Type = 'R'					;
+		Where Type = 'K'					;
 			And Not Deleted()				;
 		Into Array laList
 
