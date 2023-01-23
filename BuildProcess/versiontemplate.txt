@@ -1,0 +1,22 @@
+lparameters toUpdateObject
+
+with toUpdateObject
+	.VersionNumber    = '{VERSION} - {VERSIONDATE}'
+	.AvailableVersion = '{APPNAME}-{VERSION}-update-{VERSIONDATE}'
+	.Component        = '{COMPONENT}'
+	.Notes            = GetNotes()
+endwith
+return toUpdateObject
+
+* Get the notes for the project.@@@ Edit this code as necessary. If you specify
+* the name of a change log file as the ChangeLog setting in ProjectSettings.txt,
+* the contents of that file are substituted for the CHANGELOG placeholder so
+* there's no need to edit this.\\\
+
+procedure GetNotes
+local lcNotes
+text to lcNotes noshow
+{CHANGELOG}
+endtext
+return lcNotes
+
