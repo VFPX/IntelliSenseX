@@ -26,6 +26,9 @@ Based on ISX.Prg by Christof
 		* These are used to group and sort tools when they are displayed in menus or the Thor form
 		.Category = 'Code|IntellisenseX' && creates categorization of tools; defaults to .Source if empty
 		.Sort	  = 40 && the sort order for all items from the same Category
+		
+		.Link	   = 'https://github.com/VFPX/IntelliSenseX/blob/master/documents/Tool_Dropdown_Macros.md'
+
 
 		* For public tools, such as PEM Editor, etc.
 		.OnKeyLabelOnly	= .T.

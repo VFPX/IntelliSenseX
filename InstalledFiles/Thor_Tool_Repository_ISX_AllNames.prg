@@ -41,8 +41,7 @@ Based on a suggestion from Matt Slay.
 
 		* For public tools, such as PEM Editor, etc.
 		.Author	   = 'Christof Wollenhaupt (enhancements for Thor by Jim Nelson)'
-		.Link	   = 'http://vfpx.codeplex.com/wikipage?title=Thor%20IntellisenseX' && link to a page for this tool
-		.VideoLink = 'http://vfpx.codeplex.com/wikipage?title=Thor%20IntellisenseX#Videos'
+		.Link	   = 'https://github.com/VFPX/IntelliSenseX/blob/master/documents/Tool_Dropdown_Names.md'
 		.OptionTool	   = ccXToolName
 		.OptionClasses = 'clsCaseSensitive, clsExcludeKeywords, clsWordList, clsCase, clsAllPRGProcedures'
 
