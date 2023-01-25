@@ -715,19 +715,25 @@ Procedure CP_Tables
 
 			Endcase
 
-	Endcase
-
-	m.toISX.lSortList = m.toISX.ISXOptions.AlphaSort
-	m.toISX.nCount	  = Afields(laFields, m.lcName)
-	Dimension m.laList[1]
-	Execscript(_Screen.cThorDispatcher, 'THOR_PROC_GetFieldNames', @m.laFields, @m.laList, m.toISX.ISXOptions.Fieldnamescase, m.lcName)
-	m.toISX.nCount = Alen(m.laList, 1)
-	Dimension m.toISX.aList(m.toISX.nCount, Alen(m.laList, 2))
-	Acopy(laList, m.toISX.aList)
-	m.toISX.lDotIsTerminator = .F.
+	EndCase
+	
+	CP_Tables_ShowTable(m.toISX, m.lcName)
 
 Endproc
   
+
+Procedure CP_Tables_ShowTable(toISX, lcName)
+	Local laFields[1], laList[1]
+
+	toISX.lSortList	= m.toISX.ISXOptions.AlphaSort
+	toISX.NCount	= Afields(laFields, m.lcName)
+	Dimension m.laList[1]
+	Execscript(_Screen.cThorDispatcher, 'THOR_PROC_GetFieldNames', @m.laFields, @m.laList, m.toISX.ISXOptions.Fieldnamescase, m.lcName)
+	toISX.NCount = Alen(m.laList, 1)
+	Dimension m.toISX.aList(m.toISX.NCount, Alen(m.laList, 2))
+	Acopy(laList, m.toISX.aList)
+	toISX.lDotIsTerminator = .F.
+Endproc
 
 *====================================================================
 * Open a view
@@ -855,9 +861,12 @@ Procedure CP_Objects
 
 		Otherwise
 			lcNewName = Execscript (_Screen.cThorDispatcher, 'Thor_Proc_GetThorTableAlias', m.lcName)
-			If Vartype(m.lcNewName) = 'C'
-				loObject = Execscript(_Screen.cThorDispatcher, 'THOR_PROC_ISX_GetNewObject', m.lcNewName)
-			Endif
+			Do Case
+				Case Vartype(m.lcNewName) = 'C' and not Used(m.lcNewName)
+					loObject = Execscript(_Screen.cThorDispatcher, 'THOR_PROC_ISX_GetNewObject', m.lcNewName)
+				Case Vartype(m.lcNewName) = 'C' and Used(m.lcNewName)
+					CP_Tables_ShowTable(m.toISX, m.lcNewName)
+			Endcase
 	Endcase
 
 	If Vartype(m.loObject) = 'O' && VarType fails here if object has been nulled out

@@ -77,11 +77,7 @@ Endproc
 
 Procedure Cleanse(lcFormName)
 	Local lcResult
-	lcResult = Trim(m.lcFormName)
-	lcResult = Strtran(m.lcResult,	'..\common\', 		'')
-	lcResult = Strtran(m.lcResult, 	'..\commonapps\', 	'')
-	lcResult = Strtran(m.lcResult, 	'.scx', 			'')
-	lcResult = Strtran(m.lcResult,	Chr(0), 			'')
+	lcResult = JustStem(trim(m.lcFormName))
 	If ' ' $ m.lcResult
 		lcResult = '"' + m.lcResult + '"'
 	Endif

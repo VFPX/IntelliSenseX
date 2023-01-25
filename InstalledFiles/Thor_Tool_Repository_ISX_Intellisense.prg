@@ -28,6 +28,7 @@ Based on ISX.Prg by Christof
 		.Sort	  = 40 && the sort order for all items from the same Category
 		
 		.Link	   = 'https://github.com/VFPX/IntelliSenseX/blob/master/documents/Tool_Dropdown_Macros.md'
+		.OptionTool		= 'IntellisenseX'
 
 
 		* For public tools, such as PEM Editor, etc.

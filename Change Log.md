@@ -2,11 +2,11 @@
 ### 2023-01-27, Version 1.24 ###
 
 * New:
-    * Dropdown box is resizable.
     * New keystrokes:
         * Ctrl+Enter is a special case that applies when the dropdown list is a list of properties and methods.  The second column in the dropdown gives the parameter list, if available.  This keystroke selects the current item from the dropdown and pastes the parameter list into edit window as well.
         * Ctrl+C copies the contents of the second visible column into the clipboard.
         * Ctrl+Z closes the popup and leaves the text already entered as is, whether it matches anything in the dropdown or not.
+    * Dropdown box is resizable.
         
 * Fixed:
     * Previously, pressing a dot to cause the dropdown would cause garbage results when the character immediately following is a valid name character.  (This would occur, for instance, if entering a table name and dot before an existing field reference.) The dot is now ignored.
