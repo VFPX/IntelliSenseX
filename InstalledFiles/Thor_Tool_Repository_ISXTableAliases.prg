@@ -26,7 +26,7 @@ Based on ISX.Prg by Christof
 		* These are used to group and sort tools when they are displayed in menus or the Thor form
 		.Category = 'Code|IntellisenseX|Alias Dictionary' && creates categorization of tools; defaults to .Source if empty
 		.Sort	  = 20 && the sort order for all items from the same Category
-		.Link	  = 'https://vfpx.codeplex.com/wikipage?title=Custom%20Keyword%20Lists'
+		.Link	  = 'https://github.com/VFPX/Thor/blob/master/Docs/NewsItems/Item_47.md'
 
 		* For public tools, such as PEM Editor, etc.
 		.Author	   = 'Jim Nelson'
@@ -50,7 +50,7 @@ Return
 Procedure ToolCode
 	Lparameters lxParam1
 
-	#Define TABLEALIAS 'TableObjectAliases'
+	#Define TABLEALIAS 'Thor_TableAliases'
 	Local lcToolFolder
 	If Not Used(TABLEALIAS)
 		lcToolFolder  = Execscript(_Screen.cThorDispatcher, 'Tool Folder=')

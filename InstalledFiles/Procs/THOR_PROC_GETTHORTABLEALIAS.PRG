@@ -3,37 +3,41 @@ Lparameters lcAlias
 *	Maps an alias to its "Real Name" in Thor's TableAliases Table
 *	which can be used both for tables and objects
 
-*	Called by GoToDefinition
+*	Called by GoToDefinition and IntellisenseX
 
-#Define PLACEHOLDER '<*>'
-Local lcName, lcResult, lcToolFolder, lcWildCardValue, lnSelect, lnStarPosition
+#Define ccOriginalPlaceHolder '<*>'
+Local laMatches[1], lcMatchAlias, lcResult, lcToolFolder, lcWildCardValue, lnStartPosition
 
-lnSelect = Select()
-Select 0
-If Used('Thor_TableAliases')
-	Select Thor_TableAliases
-Else
+If Not Used('TableAliases_in_Thor')
 	lcToolFolder  = Execscript(_Screen.cThorDispatcher, 'Tool Folder=')
-	Use Addbs(m.lcToolFolder) + '..\Tables\TableAliases' Alias Thor_TableAliases Again Shared
+	Use Addbs(m.lcToolFolder) + '..\Tables\TableAliases' Alias TableAliases_in_Thor Again Shared In 0
 Endif
 
-If Indexseek(Upper(Padr(m.lcAlias, 40)),.T., 'Thor_TableAliases', 'Alias')
-	lcResult = Alltrim(Thor_TableAliases.Table)
-Else
-	Locate For Like(Upper(Alltrim(Alias)), Upper(Alltrim(m.lcAlias)))
-	If Found()
-		lnStarPosition	= At('*', Alias)
-		lcWildCardValue	= Substr(m.lcAlias, m.lnStarPosition, Len(Alltrim(m.lcAlias)) - Len(Alltrim(Alias)) + 1)
-		lcName			= Alltrim(Table)
-		If Empty(m.lcName)
-			lcResult = m.lcWildCardValue
+Select  Alias,															;
+		Table,															;
+		Upper(Alias) == Padr(Upper(m.lcAlias), 40)    As  Exact,		;
+		Len(Trim(Alias))                              As  Length		;
+	From TableAliases_in_Thor											;
+	Where Upper(Alias) == Padr(Upper(m.lcAlias), 40)					;
+		Or Like(Upper(Alltrim(Alias)), Upper(Alltrim(m.lcAlias)))		;
+	Order By Exact Desc,												;
+		Length Desc														;
+	Into Array laMatches
+
+If _Tally > 0
+	lcResult = Alltrim(m.laMatches[2])
+	If '*' $ m.lcResult
+		lcMatchAlias	= Alltrim(m.laMatches[1])
+		lnStartPosition	= At('*', m.lcMatchAlias)
+		lcWildCardValue	= Substr(m.lcAlias, m.lnStartPosition, Len(Alltrim(m.lcAlias)) - Len(m.lcMatchAlias) + 1)
+		If ccOriginalPlaceHolder $ m.lcResult
+			lcResult =  Strtran(m.lcResult, ccOriginalPlaceHolder, m.lcWildCardValue)
 		Else
-			lcResult =  Strtran(m.lcName, PLACEHOLDER, m.lcWildCardValue)
+			lcResult =  Strtran(m.lcResult, '*', m.lcWildCardValue)
 		Endif
 	Endif
 Endif
 
-Use In Thor_TableAliases
-Select (m.lnSelect)
+Use In TableAliases_in_Thor
 
 Return Execscript (_Screen.cThorDispatcher, 'Result=', m.lcResult)
