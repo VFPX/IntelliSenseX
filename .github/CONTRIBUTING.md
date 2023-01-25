@@ -1,4 +1,4 @@
-# How to contribute to Object Explorer
+# How to contribute to IntellisenseX
 
 ## Bug report?
 - Please check [issues](https://github.com/VFPX/ObjectExplorer/issues) if the bug is reported
@@ -30,4 +30,4 @@ Here are the steps to updating to a new version:
 10. Create a pull request
 
 ---
-Last changed: _2022/12/21_ ![Picture](../Docs/Images/vfpxpoweredby_alternative.gif)
+Last changed: _2023/01/27_ ![Picture](../Docs/Images/vfpxpoweredby_alternative.gif)
