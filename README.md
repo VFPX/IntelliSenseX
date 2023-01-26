@@ -4,6 +4,8 @@ Version 1.24 Released 2023-01-27
 
 [What's new in this release](Change%20Log.md)
 
+[IntellisenseX White Paper](documents/IntellisenseX_WhitePaper.pdf)
+
 ## Introduction
 **IntellisenseX** refers to a suite of Thor Tools that provide functionality similar to native Intellisense. These tools display lists of available variable names, field names, or members (properties, events, methods, and objects) while you type code, just like Intellisense. However, they cover those areas that Intellisense forgot (such as the list of field names in a table when editing in a code window) and provide new capabilities, available through customization, such as displaying the list of field names in an SQL table, as shown below
 
