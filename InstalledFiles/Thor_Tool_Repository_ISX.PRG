@@ -36,7 +36,7 @@ Based on ISX.Prg by Christof
 		.Author		   = 'Christof Wollenhaupt (enhancements for Thor by Jim Nelson)'
 		.Sort	  	   = 10
 		.Link		   = 'https://github.com/VFPX/IntelliSenseX/blob/master/README.md' && link to a page for this tool
-		.VideoLink	   = 'https://github.com/VFPX/IntelliSenseX/blob/master/documents/Videos.md'
+		.VideoLink	   = 'https://github.com/VFPX/IntelliSenseX/blob/master/documents/Thor_IntellisenseX_Videos.md'
 		.OptionTool	   = 'IntellisenseX'
 		.OptionClasses = 'clsAlphaSort, clsShowFieldDefs, clsFontName, clsFontSize, clsDisplayCount, clsFieldNamesCase, clsFiltering, clsDebuggerOpen, clsFilterType, clsFilterToggle, clsSelectIfOne, clsPRGBasedClasses, clsOverrideThisform, clsCKL'
 		.PlugIns 		= 'Open Table, IntellisenseX, Spell Field Names, New Object, Data Objects'
