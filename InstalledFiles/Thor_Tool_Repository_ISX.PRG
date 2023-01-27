@@ -35,8 +35,8 @@ Based on ISX.Prg by Christof
 		* For public tools, such as PEM Editor, etc.
 		.Author		   = 'Christof Wollenhaupt (enhancements for Thor by Jim Nelson)'
 		.Sort	  	   = 10
-		.Link		   = 'http://vfpx.codeplex.com/wikipage?title=Thor%20IntellisenseX' && link to a page for this tool
-		.VideoLink	   = 'http://vfpx.codeplex.com/wikipage?title=Thor%20IntellisenseX#Videos'
+		.Link		   = 'https://github.com/VFPX/IntelliSenseX/blob/master/README.md' && link to a page for this tool
+		.VideoLink	   = 'https://github.com/VFPX/IntelliSenseX/blob/master/documents/Videos.md'
 		.OptionTool	   = 'IntellisenseX'
 		.OptionClasses = 'clsAlphaSort, clsShowFieldDefs, clsFontName, clsFontSize, clsDisplayCount, clsFieldNamesCase, clsFiltering, clsDebuggerOpen, clsFilterType, clsFilterToggle, clsSelectIfOne, clsPRGBasedClasses, clsOverrideThisform, clsCKL'
 		.PlugIns 		= 'Open Table, IntellisenseX, Spell Field Names, New Object, Data Objects'
