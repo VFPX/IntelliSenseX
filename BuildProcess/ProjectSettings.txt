@@ -1,7 +1,7 @@
 AppName   = IntellisenseX
 AppID     = IntellisenseX
 Version   = 1.24
-Component = Yes
+Component = No
 
 ChangeLog      = Change Log.md
 Bin2PRGFolder  = InstalledFiles

@@ -1,9 +1,9 @@
 lparameters toUpdateObject
 
 with toUpdateObject
-	.VersionNumber    = '1.24 - 20230125'
-	.AvailableVersion = 'IntellisenseX-1.24-update-20230125'
-	.Component        = 'Yes'
+	.VersionNumber    = '1.24 - 20230127'
+	.AvailableVersion = 'IntellisenseX-1.24-update-20230127'
+	.Component        = 'No'
 	.Notes            = GetNotes()
 endwith
 return toUpdateObject
@@ -16,7 +16,21 @@ text to lcNotes noshow
 
 ### 2023-01-27, Version 1.24 ###
 
-* New:
+The list of Thor tools that use the IntellisenseX dropdown listbox has expanded. Like all Thor tools, you can make them accessible by assigning a hot key, adding them to a pop-up menu, or any of the other options that Thor provides for executing a tool.
+
+| Thor Tool | Description |
+| --- | ----------- |
+| Dropdown Constants List | List of all defined constants created by #Define or #Include statements |
+| Dropdown Table Names | List of all tables in the path|
+| Dropdown Procedures List | List of all PRGs and procedures/functions defined in PRGs found in "Set Procedure to"|
+| Dropdown Intellisense scripts | List of native Intellisense custom scripts|
+| AutoComplete | List of all names used in code window (or what is highlighted there)|
+| Dropdown Form Names in Active Project | List of all form names in the Active Project|
+| Dropdown Report Names in Active Project | List of all report names in the Active Project|
+| Dropdown Aliases | List of all aliases used in current data session
+| DBC Tables by !| Assigns hot key ! so that typing in the name of a database followed by ! gives a popup of the names of the tables and views in the database.|
+
+* Also New:
     * New keystrokes:
         * Ctrl+Enter is a special case that applies when the dropdown list is a list of properties and methods.  The second column in the dropdown gives the parameter list, if available.  This keystroke selects the current item from the dropdown and pastes the parameter list into edit window as well.
         * Ctrl+C copies the contents of the second visible column into the clipboard.

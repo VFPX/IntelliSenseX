@@ -4,43 +4,42 @@ Version 1.24 Released 2023-01-27
 
 [What's new in this release](Change%20Log.md)
 
+*** 
 [IntellisenseX White Paper](documents/IntellisenseX_WhitePaper.pdf)
+
+[Videos](documents/Thor_IntellisenseX_Videos.md)
+
 
 ## Introduction
 **IntellisenseX** refers to a suite of Thor Tools that provide functionality similar to native Intellisense. These tools display lists of available variable names, field names, or members (properties, events, methods, and objects) while you type code, just like Intellisense. However, they cover those areas that Intellisense forgot (such as the list of field names in a table when editing in a code window) and provide new capabilities, available through customization, such as displaying the list of field names in an SQL table, as shown below
 
-
 ![](documents/images/thor_intellisensex_examples_snaghtmlf871ea8.png)
 
-<a name="Videos"></a>
-## Videos
-
-1. [Getting started](http://bit.ly/Q3izOd) 
-2. [Using and configuring the dropdown box](http://bit.ly/SmMeQw) (4:01)
-3. [Fields from tables](http://www.youtube.com/watch?v=lPmFwa4WeJ8&amp;hd=1&amp;rel=0) (9:29)
-4. [Properties and methods from objects](http://www.youtube.com/watch?v=9TUvouhSU6Y&amp;hd=1&amp;rel=0) (5:14)
-5. [Indirect table and object references and the Alias directive](http://www.youtube.com/watch?v=4lv4FoU2XEA&amp;hd=1&amp;rel=0) (3:51)
-6. [Variables (LOCAL and otherwise) list](http://bit.ly/P73dWr) (5:28)
-7. [Constants (#Defines) list](http://bit.ly/SmM9fA) (3:18)
-8. [Setting ControlSource in PEM Editor](http://bit.ly/Rj9zpQ) (2:25)
-9. [Known issues](https://www.youtube.com/watch?v=6x9BraGybXY) (7:00)
-10. ["IntellisenseX by Dot" vs "IntellisenseX by Hot Key"](http://www.youtube.com/watch?v=71psd6RH2Ls&amp;hd=1&amp;rel=0) (3:29)
-11. [Managing Plug-Ins: OpenTable and Intellisense](http://www.youtube.com/watch?v=UGyqlInAfvc&amp;hd=1&amp;rel=0) (5:34)
- 
 
 ## Installation Instructions
 IntellisenseX is downloaded and installed as part of the Check For Updates process for [Thor](https://github.com/VFPX/Thor).
 
+
 ## Thor Tools
-IntellisenseX is implemented through the use of four tools:
+IntellisenseX is implemented through the use of a number tools:
 * **IntellisenseX by Dot** is the main tool. Once executed, IntellisenseX is activated any time you press a period (dot), the same as for native Intellisense. The tool is actually a toggle. If you execute it a second time, the On Key Label is removed, and typing a dot simply works like normal. (Unfortunately, there is an undesirable side effect to this technique of executing code when you press a dot, which is why you may want to turn off Intellisense by Dot from time to time. See [glitch when using Intellisense by Dot](documents/Thor_IntellisenseX_Dot_Glitch.md) glitch when using Intellisense by Dot. )
-* **IntellisenseX by Hot Key** is the twin of **IntellisenseX by Dot**, except that it is activated differently, by using a hot key (which you define in Thor) instead of a dot. To activate the tool, press the hot key ***after*** you press the dot. This tool is available because of the [glitch when using Intellisense by Dot](documents/Thor_IntellisenseX_Dot_Glitch.md).</li>
-* **Dropdown Variables List** provides a list of local variables for those who do not use MDot (m.)
-* **Dropdown Constants List** provides a list of constants (created by #Define and #Include)
+* **IntellisenseX by Hot Key** is the twin of **IntellisenseX by Dot**, except that it is activated differently, by using a hot key (which you define in Thor) instead of a dot. To activate the tool, press the hot key ***after*** you press the dot. This tool is available because of the [glitch when using Intellisense by Dot](documents/Thor_IntellisenseX_Dot_Glitch.md).
 
-Like all Thor tools, these tools can be executed in a number of different ways, such as by using the Tool Launcher, as shown below, or by user-assigned hot keys.
+There are also a number of related Thor Tools that use the same dropdown listbox for selecting from a list.  Like all Thor tools, you can make them accessible by assigning a hot key, including in pop-up menu, or any of the other options that Thor provides for executing a tool.
 
-![](documents/images/thor_intellisensex_examples_image_4.png)
+| Thor Tool | Description |
+| --- | ----------- |
+| Dropdown Constants List | List of all defined constants, created by #Define or #Include statements |
+| Dropdown Table Names | List of all tables in the path|
+| Dropdown Procedures List | List of all PRGs in the procedures in "Set Proc to"|
+| Dropdown Intellisense scripts | List of native Intellisense custom scripts|
+| AutoComplete | List of all names used in code window (or what is highlighted there)|
+| Dropdown Form Names in Active Project | List of all form names in the Active Project|
+| Dropdown Report Names in Active Project | List of all report names in the Active Project|
+| Dropdown Alias | List of all aliases used in current data session
+| DBC Tables by !| Assigns hot key ! so that typing in the name of a database followed by ! gives a popup of the names of the tables and views in the database.|
+
+
 
 ## Examples of IntellisenseX
 
