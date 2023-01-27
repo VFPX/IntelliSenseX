@@ -40,7 +40,7 @@ Based on ISX.Prg by Christof
 		* For public tools, such as PEM Editor, etc.
 		.Author			= 'Christof Wollenhaupt (enhancements for Thor by Jim Nelson)'
 		.Link		   = 'https://github.com/VFPX/IntelliSenseX/blob/master/README.md' && link to a page for this tool
-		.VideoLink	   = 'https://github.com/VFPX/IntelliSenseX/blob/master/documents/Videos.md'
+		.VideoLink	   = 'https://github.com/VFPX/IntelliSenseX/blob/master/documents/Thor_IntellisenseX_Videos.md'
 		.OptionTool		= 'IntellisenseX'
 		.OnKeyLabelOnly	= .T.
 		.PlugIns 		= 'Open Table, IntellisenseX, Spell Field Names, New Object, Data Objects'
