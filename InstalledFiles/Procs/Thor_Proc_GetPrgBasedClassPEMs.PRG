@@ -15,7 +15,7 @@ If 'C' = Vartype(m.tcCodeSource)
 	lnSelStart	 = Evl(m.lnSelStart, 1)
 Else
 	* editorwin home page = http://vfpx.codeplex.com/wikipage?title=thor%20editorwindow%20object
-	loEditorWin = Execscript(_Screen.cThorDispatcher, 'Class= editorwin from pemeditor')
+	loEditorWin = Execscript(_Screen.cThorDispatcher, 'Thor_Proc_EditorWin')
 
 	lnSelStart	 = m.loEditorWin.GetSelStart()
 	lcCodeSource = m.loEditorWin.GetString(0, 10000000)

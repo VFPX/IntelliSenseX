@@ -76,7 +76,7 @@ Procedure ToolCode
 
 	Else
 		* editorwin home page = http://vfpx.codeplex.com/wikipage?title=thor%20editorwindow%20object
-		m.loEditorWin = Execscript(_Screen.cThorDispatcher, 'Class= editorwin from pemeditor')
+		m.loEditorWin = Execscript(_Screen.cThorDispatcher, 'Thor_Proc_EditorWin')
 
 		If 0 > m.loEditorWin.FindWindow()
 			Return

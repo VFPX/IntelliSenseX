@@ -94,7 +94,7 @@ Define Class ExpandIntellisense As Custom
 	Procedure Expand(lcText)
 		* editorwin home page = http://vfpx.codeplex.com/wikipage?title=thor%20editorwindow%20object
 		Local lnWindowType, loEditorWin
-		loEditorWin	 = Execscript(_Screen.cThorDispatcher, 'Class= editorwin from pemeditor')
+		loEditorWin	 = Execscript(_Screen.cThorDispatcher, 'Thor_Proc_EditorWin')
 		lnWindowType = m.loEditorWin.FindWindow()
 
 		Return Execscript(_Screen.cThorDispatcher, 'Thor_Proc_GetIntellisenseScript', m.lcText, m.lnWindowType)
