@@ -1,4 +1,8 @@
 
+### 2023-02-08, Version 1.24.01 ###
+
+Minor bug fixes and missing file
+
 ### 2023-01-27, Version 1.24 ###
 
 The list of Thor tools that use the IntellisenseX dropdown listbox has expanded. Like all Thor tools, you can make them accessible by assigning a hot key, adding them to a pop-up menu, or any of the other options that Thor provides for executing a tool.

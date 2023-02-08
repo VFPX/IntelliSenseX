@@ -1,8 +1,8 @@
 lparameters toUpdateObject
 
 with toUpdateObject
-	.VersionNumber    = '1.24 - 20230127'
-	.AvailableVersion = 'IntellisenseX-1.24-update-20230127'
+	.VersionNumber    = '1.24.01 - 20230208'
+	.AvailableVersion = 'IntellisenseX-1.24.01-update-20230208'
 	.Component        = 'No'
 	.Notes            = GetNotes()
 endwith
@@ -13,6 +13,10 @@ return toUpdateObject
 procedure GetNotes
 local lcNotes
 text to lcNotes noshow
+
+### 2023-02-08, Version 1.24.01 ###
+
+Minor bug fixes and missing file
 
 ### 2023-01-27, Version 1.24 ###
 
