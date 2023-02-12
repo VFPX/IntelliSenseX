@@ -810,7 +810,7 @@ Procedure CP_Objects
 		Case m.toISX.nEditSource = MethodCode And m.toISX.ISXOptions.OverrideThisform = 1
 
 		Case m.toISX.nEditSource = MethodCode And(Left(m.lcName, 1) = '.' Or Empty(m.lcName) Or m.toISX.lSecondPass Or m.toISX.ISXOptions.OverrideThisform > 1)
-			* tools home page = http://vfpx.codeplex.com/wikipage?title=thor%20tools%20object
+			* tools home page = https://github.com/VFPX/Thor/blob/master/Docs/Thor_tools_object.md
 			SAVEDEBUGINFO
 			loTools		 = Execscript(_Screen.cThorDispatcher, 'Class= tools from pemeditor')
 			If m.toISX.lSecondPass Or m.toISX.nEditSource = CommandWindow Or m.toISX.lAliased
@@ -842,7 +842,7 @@ Procedure CP_Objects
 					Endif
 			Endcase
 		Case m.toISX.nEditSource = PRGFile And(m.toISX.ISXOptions.PRGBasedClasses > 1  Or m.toISX.lSecondPass)
-			* tools home page = http://vfpx.codeplex.com/wikipage?title=thor%20tools%20object
+			* tools home page = https://github.com/VFPX/Thor/blob/master/Docs/Thor_tools_object.md
 			SAVEDEBUGINFO
 			loTools		 = Execscript(_Screen.cThorDispatcher, 'Class= tools from pemeditor')
 			If m.toISX.lSecondPass Or m.toISX.nEditSource = CommandWindow
@@ -1074,7 +1074,7 @@ Procedure FindAlias(loISX)
 	m.lcName = m.loISX.cEntity
 	If m.loISX.nCount = 0 And m.loISX.nEditSource # CommandWindow
 		If (Left(m.lcName, 1) = '.') Or Empty(m.lcName)
-			* tools home page = http://vfpx.codeplex.com/wikipage?title=thor%20tools%20object
+			* tools home page = https://github.com/VFPX/Thor/blob/master/Docs/Thor_tools_object.md
 			m.loTools = Execscript(_Screen.cThorDispatcher, 'Class= tools from pemeditor')
 			m.lcName  = m.loTools.oUtils.oIDEx.GetCurrentHighlightedText(.T.)
 			m.loISX.cEntity = m.lcName

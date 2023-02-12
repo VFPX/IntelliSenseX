@@ -1,6 +1,6 @@
 Lparameters tcDBCName, taDestArray
 
-* tools home page = http://vfpx.codeplex.com/wikipage?title=thor%20tools%20object
+* tools home page = https://github.com/VFPX/Thor/blob/master/Docs/Thor_tools_object.md
 Local loTools As Pemeditor_tools Of 'c:\visual foxpro\programs\9.0\common\thor\tools\apps\pem editor\source\peme_tools.vcx'
 Local laDataEnvironment[1], lcAlias, lnCount, lnX, loCurrent, loDataEnvironment, loFormObject
 loTools = Execscript(_Screen.cThorDispatcher, 'Class= tools from pemeditor')

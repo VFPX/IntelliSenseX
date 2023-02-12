@@ -1,8 +1,8 @@
 lparameters toUpdateObject
 
 with toUpdateObject
-	.VersionNumber    = '1.24.01 - 20230208'
-	.AvailableVersion = 'IntellisenseX-1.24.01-update-20230208'
+	.VersionNumber    = '1.24.02 - 20230212'
+	.AvailableVersion = 'IntellisenseX-1.24.02-update-20230212'
 	.Component        = 'No'
 	.Notes            = GetNotes()
 endwith
@@ -13,6 +13,9 @@ return toUpdateObject
 procedure GetNotes
 local lcNotes
 text to lcNotes noshow
+### 2023-02-12, Version 1.24.02 ###
+
+* IntelliSenseX now respects the case of object members defined in _MemberData. Because this can be slow, it works best if the IntelliSenseX "Apply Custom Keyword List" option is turned on: the correct case of object members is saved in the custom keyword list the first time it's used, so there's no need to process _MemberData the second time.
 
 ### 2023-02-08, Version 1.24.01 ###
 

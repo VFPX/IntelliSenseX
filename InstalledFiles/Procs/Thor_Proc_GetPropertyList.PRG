@@ -9,7 +9,7 @@ Local lcParametersList, lcType, lcValue, lcWord1, llPropValues, lnColumnCount, l
 Local lnKeyWordIndex, lnLastRow, loException, loPEMs
 
 If Pemstatus(m.toObject, 'BaseClass', 5) And _Screen.oISXOptions.UseCKLforPEMs = .F.
-	* tools home page = http://vfpx.codeplex.com/wikipage?title=thor%20tools%20object
+	* tools home page = https://github.com/VFPX/Thor/blob/master/Docs/Thor_tools_object.md
 	loTools	= Execscript(_Screen.cThorDispatcher, 'Class= tools from pemeditor')
 	loPEMs	= m.loTools.GetPEMList(m.toObject)
 Else
@@ -81,11 +81,31 @@ For lnCount = 1 To m.lnCount
 				lcName	= Trim(_Screen.oISXOptions.Keywordlist[m.lnKeyWordIndex])
 			Case m.lnIndex # 0
 				lcName	= Trim(m.loPEMs.Item[m.lnIndex].cName)
+*** DH 2023-02-11: add the member name to the custom keyword list if we're supposed to
+				if _screen.oISXOptions.UseCKLforPEMs
+					_screen.oISXOptions.oKeyWordList.UpdateWord(lcName)
+				endif _screen.oISXOptions.UseCKLforPEMs
+*** DH 2023-02-11: end of new code
 			Case m.lcType = 'OBJECT' And 'O' = Type('m.toObject.&lcName') And 'C' = Type('m.toObject.&lcName..Name')
 				lcName	= m.toObject.&lcName..Name
 				If 'C' = Type('m.toObject.&lcName..BaseClass')
 					lcBmpName	= m.toObject.&lcName..BaseClass
 				Endif
+*** DH 2023-02-11: if we didn't find the member name, get the PEM list from PEMEditor,
+*** 				which handles _MemberData. If we find it, add it to the custom
+***					keyword list so we don't get the overhead of calling GetPEMList
+***					the next time.
+			case loPEMS.Count = 0 and _screen.oISXOptions.UseCKLforPEMs
+				loTools	= execscript(_screen.cThorDispatcher, 'Class= tools from pemeditor')
+				loPEMs	= m.loTools.GetPEMList(m.toObject)
+				lnIndex	= m.loPEMs.GetKey(Upper(Trim(m.lcName)))
+				if lnIndex > 0
+					lcName = trim(m.loPEMs.Item[m.lnIndex].cName)
+					_screen.oISXOptions.oKeyWordList.UpdateWord(lcName)
+				else
+					lcName = proper(m.lcName)
+				endif lnIndex > 0
+*** DH 2023-02-11: end of new code
 			Otherwise
 				lcName	= Proper(m.lcName)
 		Endcase
@@ -162,6 +182,6 @@ Acopy(laList, m.lxResult.aList)
 Return Execscript(_Screen.cThorDispatcher, 'Result=', m.lxResult)
 
 
-	Procedure CountUpperCase(lcText)
-		Return Len(Chrtran(lcText, 'abcdefghijklmnopqrstuvwxyz ', ''))
-	EndProc 
+Procedure CountUpperCase(lcText)
+	Return Len(Chrtran(lcText, 'abcdefghijklmnopqrstuvwxyz ', ''))
+EndProc 

@@ -3,7 +3,7 @@
 Lparameters toISX
 
 Local loParameter As 'Empty'
-* tools home page = http://vfpx.codeplex.com/wikipage?title=thor%20tools%20object
+* tools home page = https://github.com/VFPX/Thor/blob/master/Docs/Thor_tools_object.md
 Local loTools As Pemeditor_tools Of 'c:\visual foxpro\programs\MyThor\thor\tools\apps\pem editor\source\peme_tools.vcx'
 Local laFields[1], laList[1], lcName, lcResult, llForceIt, lnFieldNamesCase, loTopOfForm
 Local lxObjectInfo, lxResult

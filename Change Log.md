@@ -1,3 +1,6 @@
+### 2023-02-12, Version 1.24.02 ###
+
+* IntelliSenseX now respects the case of object members defined in _MemberData. Because this can be slow, it works best if the IntelliSenseX "Apply Custom Keyword List" option is turned on: the correct case of object members is saved in the custom keyword list the first time it's used, so there's no need to process _MemberData the second time.
 
 ### 2023-02-08, Version 1.24.01 ###
 

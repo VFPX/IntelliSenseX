@@ -1,33 +1,34 @@
 # How to contribute to IntellisenseX
 
 ## Bug report?
-- Please check [issues](https://github.com/VFPX/ObjectExplorer/issues) if the bug is reported
+- Please check [issues](https://github.com/VFPX/IntellisenseX/issues) to see if the bug has already been reported.
+
 - If you're unable to find an open issue addressing the problem, open a new one. Be sure to include a title and clear description, as much relevant information as possible, and a code sample or an executable test case demonstrating the expected behavior that is not occurring.
 
-### Did you write a patch that fixes a bug?
-- Open a new GitHub merge request with the patch.
-- Ensure the PR description clearly describes the problem and solution.
-  - Include the relevant version number if applicable.
-- See [New version](#new-version) for additional tasks
-
-## New version
+## Fix a bug or add an enhancement
 Here are the steps to updating to a new version:
 
-1. Create a fork at github
-   - See this [guide](https://www.dataschool.io/how-to-contribute-on-github/) for setting up and using a fork
-2. Make whatever changes are necessary.
+- Fork the project: see this [guide](https://www.dataschool.io/how-to-contribute-on-github/) for setting up and using a fork.
+
+- Make whatever changes are necessary. The source code for IntelliSenseX is in the InstalledFiles folder.
 ---
-3. Edit the Version setting in _BuildProcess\ProjectSettings.txt_.
-4. Update the version and date in _README.md_.
-5. Describe the changes in the top of _docs\Change Log.md_.
-6. Run the VFPX Deployment tool to create the installation files by
-    -   Invoking menu item  **Thor Tools -> Applications -> VFPX Project Deployment**  
-    -   Or executing ```EXECSCRIPT(_screen.cThorDispatcher, 'Thor_Tool_DeployVFPXProject')``` 
-    -   Or executing Thor tool **"VFPX Project Deployment"**
----
-7. Commit
-9. Push to your fork
-10. Create a pull request
+- Edit the Version setting in _BuildProcess\ProjectSettings.txt_.
+
+- Update the version and date in _README.md_.
+
+- Describe the changes in the top of _Change Log.md_.
+
+- If you haven't already done so, install VFPX Deployment: choose Check for Updates from the Thor menu, turn on the checkbox for VFPX Deployment, and click Install.
+
+- Start VFP 9 (not VFP Advanced) and CD to the IntelliSenseX folder.
+
+- Run the VFPX Deployment tool to create the installation files: choose VFPX Project Deployment from the Thor Tools, Application menu. Alternately, execute ```EXECSCRIPT(_screen.cThorDispatcher, 'Thor_Tool_DeployVFPXProject')```.
 
 ---
-Last changed: _2023/01/27_ ![Picture](../Docs/Images/vfpxpoweredby_alternative.gif)
+- Commit the changes.
+
+- Push to your fork.
+
+- Create a pull request; ensure the description clearly describes the problem and solution or the enhancement.
+---
+Last changed: _2023/02/12_ ![Picture](../Docs/Images/vfpxpoweredby_alternative.gif)
