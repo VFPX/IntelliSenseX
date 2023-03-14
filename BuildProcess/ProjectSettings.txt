@@ -1,6 +1,6 @@
 AppName   = IntellisenseX
 AppID     = IntellisenseX
-Version   = 1.24.02
+Version   = 1.24.03
 Component = No
 
 ChangeLog      = Change Log.md
