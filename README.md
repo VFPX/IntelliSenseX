@@ -1,6 +1,6 @@
 # Thor IntellisenseX
 
-Version 1.24.02 Released 2023-02-12
+Version 1.24.03 Released 2023-03-14
 
 [What's new in this release](Change%20Log.md)
 
@@ -212,5 +212,5 @@ Thanks also to Matt Slay for asking the right question at the right time to get 
 ## Helping with this project
 See [How to contribute to IntellisenseX](.github/CONTRIBUTING.md) for details on how to help with this project.
 
-Last changed: _2023-02-12_ ![Picture](./docs/images/vfpxpoweredby_alternative.gif)
+Last changed: _2023-03-14_ ![Picture](./docs/images/vfpxpoweredby_alternative.gif)
 

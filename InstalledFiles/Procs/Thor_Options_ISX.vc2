@@ -326,7 +326,7 @@ DEFINE CLASS clsisx AS container
 		Page3.Name = "Page3", ;
 		Page4.Caption = "Display", ;
 		Page4.Name = "Page4", ;
-		Page5.Caption = "Debugger", ;
+		Page5.Caption = "Disabling", ;
 		Page5.Name = "Page5"
 		*< END OBJECT: BaseClass="pageframe" />
 
@@ -689,12 +689,13 @@ DEFINE CLASS clsisx AS container
 		Alignment = 0, ;
 		AutoSize = .T., ;
 		BackStyle = 0, ;
-		Caption = "Disable IntellisenseX when debugger opens", ;
-		Height = 17, ;
+		Caption = "Use timer to disable IntellisenseX when not in a code window or the Command window", ;
+		Height = 32, ;
 		Left = 25, ;
 		Name = "Check1", ;
 		Top = 8, ;
-		Width = 262
+		Width = 271, ;
+		WordWrap = .T.
 		*< END OBJECT: BaseClass="checkbox" />
 
 	ADD OBJECT 'Line1' AS line WITH ;
