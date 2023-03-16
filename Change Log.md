@@ -1,3 +1,7 @@
+### 2023-03-16, Version 1.24.04 ###
+
+Bug fix
+
 ### 2023-03-14, Version 1.24.03 ###
 
 Minor changes to captions for options

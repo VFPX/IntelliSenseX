@@ -871,12 +871,16 @@ Procedure CP_Objects
 
 	If Vartype(m.loObject) = 'O' && VarType fails here if object has been nulled out
 		SAVEDEBUGINFO
-		loPEMs	   = Execscript(_Screen.cThorDispatcher, 'Thor_Proc_GetPropertyList', m.loObject)
-		If Type('m.loPEMs.aList[1, 1]') = 'C'
-			Dimension m.toISX.aList[1]
-			Acopy(loPEMs.aList, m.toISX.aList)
-			toISX.NCount = Alen(m.toISX.aList, 1)
-		Endif
+		Try 
+			loPEMs	   = Execscript(_Screen.cThorDispatcher, 'Thor_Proc_GetPropertyList', m.loObject)
+			If Type('m.loPEMs.aList[1, 1]') = 'C'
+				Dimension m.toISX.aList[1]
+				Acopy(loPEMs.aList, m.toISX.aList)
+				toISX.NCount = Alen(m.toISX.aList, 1)
+			Endif
+		Catch to loException
+			
+		EndTry
 	Endif
 
 Endproc
