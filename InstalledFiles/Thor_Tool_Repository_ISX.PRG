@@ -41,6 +41,10 @@ Based on ISX.Prg by Christof
 		.OptionClasses = 'clsAlphaSort, clsShowFieldDefs, clsFontName, clsFontSize, clsDisplayCount, clsFieldNamesCase, clsFiltering, clsDebuggerOpen, clsFilterType, clsFilterToggle, clsSelectIfOne, clsPRGBasedClasses, clsOverrideThisform, clsCKL'
 		.PlugIns 		= 'Open Table, IntellisenseX, Spell Field Names, New Object, Data Objects'
 		.PlugInClasses   = 'clsISXPlugIn, clsISXNewObject, clsISXDataObject'
+		
+		.ForumName = 'IntellisenseX'
+		.ForumLink = 'https://github.com/VFPX/IntellisenseX/issues'
+		
 	Endwith
 
 	Return lxParam1
