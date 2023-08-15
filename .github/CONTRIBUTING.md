@@ -12,7 +12,7 @@ Here are the steps to updating to a new version:
 
 1. Make whatever changes are necessary. The source code for IntelliSenseX is in the InstalledFiles folder.
 
-1. If you haven't already done so, install VFPX Deployment: choose Check for Updates from the Thor menu, turn on the checkbox for VFPX Deployment, and click Install.
+1. If you haven't already done so, install VFPX Deployment: invoke menu item  **Thor -> Check For Updates**, turn on the checkbox for VFPX Deployment, and click Install.
 
 ---
 4. Edit the Version setting in _BuildProcess\ProjectSettings.txt_.
@@ -23,6 +23,7 @@ Here are the steps to updating to a new version:
 
 1. Run the VFPX Deployment tool to create the installation files by
     -   Invoking menu item  **Thor Tools -> Applications -> VFPX Project Deployment**  
+    -   Or executing Thor tool **"VFPX Project Deployment"**
     -   Or executing ```EXECSCRIPT(_screen.cThorDispatcher, 'Thor_Tool_DeployVFPXProject')``` 
 
 ---

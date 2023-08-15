@@ -13,6 +13,7 @@ If Pcount() = 1								;
 
 		* Required
 		.Prompt		   = 'DBC Tables by !' && used in menus
+		.AppID 		   = 'IntellisenseX'
 
 		* Optional
 		Text To .Description Noshow && a description for the tool

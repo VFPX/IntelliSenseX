@@ -1,8 +1,8 @@
 lparameters toUpdateObject
 
 with toUpdateObject
-	.VersionNumber    = '1.24.04 - 20230316'
-	.AvailableVersion = 'IntellisenseX-1.24.04-update-20230316'
+	.VersionNumber    = '1.24.05 - 20230815'
+	.AvailableVersion = 'IntellisenseX-1.24.05-update-20230815'
 	.Component        = 'No'
 	.Notes            = GetNotes()
 endwith
@@ -13,6 +13,10 @@ return toUpdateObject
 procedure GetNotes
 local lcNotes
 text to lcNotes noshow
+### 2023-08-15, Version 1.24.05 ###
+
+Add new property .AppID to all tools to identify the project they originate in.
+
 ### 2023-03-16, Version 1.24.04 ###
 
 Bug fix
