@@ -13,6 +13,7 @@ If Pcount() = 1						  ;
 	
 		* Required
 		.Prompt		   = 'Dropdown Table Names' && used in menus
+		.AppID 		   = 'IntellisenseX'
 		
 		Text to .Description NoShow 
 Dropdown list of all tables in the current path

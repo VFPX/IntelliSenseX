@@ -25,14 +25,16 @@ DEFINE CLASS clsallnames AS container
 		*p: _memberdata		&& XML Metadata for customizable properties
 	*</DefinedPropArrayMethod>
 
-	Anchor = 15
-	Height = 260
-	Name = "clsallnames"
-	Width = 345
-	_memberdata = <VFPData>
-		<memberdata name="getoption" display="GetOption"/>
-		<memberdata name="setoption" display="SetOption"/>
-		</VFPData>		&& XML Metadata for customizable properties
+	*<PropValue>
+		Anchor = 15
+		Height = 260
+		Name = "clsallnames"
+		Width = 345
+		_memberdata = <VFPData>
+			<memberdata name="getoption" display="GetOption"/>
+			<memberdata name="setoption" display="SetOption"/>
+		</VFPData>
+	*</PropValue>
 
 	ADD OBJECT 'Baselabel1' AS label WITH ;
 		Alignment = 2, ;
@@ -287,14 +289,16 @@ DEFINE CLASS clsisx AS container
 		*p: _memberdata		&& XML Metadata for customizable properties
 	*</DefinedPropArrayMethod>
 
-	Anchor = 15
-	Height = 260
-	Name = "clsisx"
-	Width = 345
-	_memberdata = <VFPData>
-		<memberdata name="setoption" display="SetOption"/>
-		<memberdata name="getoption" display="GetOption"/>
-		</VFPData>		&& XML Metadata for customizable properties
+	*<PropValue>
+		Anchor = 15
+		Height = 260
+		Name = "clsisx"
+		Width = 345
+		_memberdata = <VFPData>
+			<memberdata name="setoption" display="SetOption"/>
+			<memberdata name="getoption" display="GetOption"/>
+		</VFPData>
+	*</PropValue>
 
 	ADD OBJECT 'Baselabel1' AS label WITH ;
 		Alignment = 2, ;
@@ -658,8 +662,8 @@ DEFINE CLASS clsisx AS container
 		KeyboardLowValue = 6, ;
 		Left = 135, ;
 		Name = "Spinner1", ;
-		SpinnerHighValue = 12.00, ;
-		SpinnerLowValue = 6.00, ;
+		SpinnerHighValue =  12.00, ;
+		SpinnerLowValue =   6.00, ;
 		Top = 52, ;
 		Width = 45
 		*< END OBJECT: BaseClass="spinner" />
@@ -670,8 +674,8 @@ DEFINE CLASS clsisx AS container
 		KeyboardLowValue = 4, ;
 		Left = 135, ;
 		Name = "Spinner2", ;
-		SpinnerHighValue = 24.00, ;
-		SpinnerLowValue = 4.00, ;
+		SpinnerHighValue =  24.00, ;
+		SpinnerLowValue =   4.00, ;
 		Top = 82, ;
 		Width = 45
 		*< END OBJECT: BaseClass="spinner" />

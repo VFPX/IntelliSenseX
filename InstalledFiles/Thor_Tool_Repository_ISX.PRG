@@ -13,6 +13,7 @@ If Pcount() = 1								;
 
 		* Required
 		.Prompt		   = 'IntellisenseX - by dot' && used in menus
+		.AppID 		   = 'IntellisenseX'
 
 		* Optional
 		Text To .Description Noshow && a description for the tool

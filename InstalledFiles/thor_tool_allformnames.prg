@@ -13,6 +13,7 @@ If Pcount() = 1								;
 
 		* Required
 		.Prompt		   = 'Dropdown Form Names in Active Project'
+		.AppID 		   = 'IntellisenseX'
 
 		* Optional
 		Text To .Description Noshow && a description for the tool

@@ -1,3 +1,7 @@
+### 2023-08-15, Version 1.24.05 ###
+
+Add new property .AppID to all tools to identify the project they originate in.
+
 ### 2023-03-16, Version 1.24.04 ###
 
 Bug fix

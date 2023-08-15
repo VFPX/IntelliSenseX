@@ -13,6 +13,7 @@ If Pcount() = 1								;
 
 		* Required
 		.Prompt		   = 'Dropdown Constants List' && used in menus
+		.AppID 		   = 'IntellisenseX'
 
 		* Optional
 		Text To .Description Noshow && a description for the tool

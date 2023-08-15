@@ -16,6 +16,7 @@ If Pcount() = 1								;
 
 		* Required
 		.Prompt		   = ccXToolName && used in menus
+		.AppID 		   = 'IntellisenseX'
 
 		* Optional
 		Text To .Description Noshow && a description for the tool
