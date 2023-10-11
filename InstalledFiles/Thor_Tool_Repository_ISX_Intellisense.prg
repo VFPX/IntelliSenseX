@@ -12,12 +12,12 @@ If Pcount() = 1								;
 	With m.lxParam1
 
 		* Required
-		.Prompt		   = 'Dropdown Intellisense scripts' && used in menus
+		.Prompt		   = 'Dropdown Intellisense Command Expansions' && used in menus
 		.AppID 		   = 'IntellisenseX'
 
 		* Optional
 		Text To .Description Noshow && a description for the tool
-Intellisense dropdown list of native Intellisense custom scripts
+Dropdown list of native Intellisense Command Expansions
 
 Based on ISX.Prg by Christof
 		Endtext
