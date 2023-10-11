@@ -1,3 +1,7 @@
+### 2023-10-11, Version 1.24.06 ###
+
+* Spelling corrections and renaming 
+
 ### 2023-08-15, Version 1.24.05 ###
 
 Add new property .AppID to all tools to identify the project they originate in.

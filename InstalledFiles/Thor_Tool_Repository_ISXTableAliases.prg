@@ -56,6 +56,7 @@ Procedure ToolCode
 	If Not Used(TABLEALIAS)
 		lcToolFolder  = Execscript(_Screen.cThorDispatcher, 'Tool Folder=')
 		Use Addbs(lcToolFolder) + '..\Tables\TableAliases' In 0 Alias (TABLEALIAS) Order alias Again Shared
-	Endif
+	EndIf
+	Goto top in TABLEALIAS
 	Execscript(_Screen.cThorDispatcher, 'Thor_Proc_SuperBrowse', TABLEALIAS)
 Endproc

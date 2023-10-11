@@ -1,6 +1,6 @@
 # Thor IntellisenseX
 
-Version 1.24.05 Released 2023-08-15
+Version 1.24.06 Released 2023-10-11
 
 [What's new in this release](Change%20Log.md)
 
