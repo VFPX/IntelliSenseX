@@ -1,3 +1,7 @@
+### 2023-10-27, Version 1.24.07 ###
+
+* Expand column widths for 2nd / 3rd columns
+
 ### 2023-10-11, Version 1.24.06 ###
 
 * Spelling corrections and renaming 

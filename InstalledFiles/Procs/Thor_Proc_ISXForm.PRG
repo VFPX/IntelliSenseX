@@ -236,12 +236,12 @@ Define Class isxForm As Form
 			*** JRN 9/11/2011 : Add a little more to width
 			lnMaxWidth = m.lnMaxWidth + 30
 			If m.toISX.ISXOptions.ShowFieldDefs And m.lnMaxColumn2Width > 0
-				lnMaxColumn2Width = m.lnMaxColumn2Width + 20
+				lnMaxColumn2Width = m.lnMaxColumn2Width + 40
 			Else
 				lnMaxColumn2Width = 0
 			Endif
 			If m.lnMaxColumn3Width > 0
-				lnMaxColumn3Width = m.lnMaxColumn3Width + 20
+				lnMaxColumn3Width = m.lnMaxColumn3Width + 40
 			Else
 				lnMaxColumn3Width = 0
 			Endif
