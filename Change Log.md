@@ -1,3 +1,9 @@
+### 2023-12-22, Version 1.25 ###
+
+* Attempted fix to handle when dot is pressed not in a code window, eliminating the need for the timer altogether (Issue #26).
+* Fix bug to correctly toggle ISX by dot when not using timer (Issue #25).
+* Add hook so that Thor menus may show checkbox for ISX by dot when it is turned on (a feature for Thor suggested but not yet implemented).
+
 ### 2023-10-27, Version 1.24.07 ###
 
 * Expand column widths for 2nd / 3rd columns
