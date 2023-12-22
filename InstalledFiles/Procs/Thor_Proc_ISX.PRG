@@ -196,10 +196,7 @@ Procedure Autocomplete
 	*-----------------------------------------------------------------
 	lnWHandle = m.toISX.GetCurrentWindow()
 	If m.lnWHandle == 0
-		If Not Empty(m.tcInvocation)
-			Clear Typeahead
-			Keyboard '{Mouse}{Mouse}' + m.tcInvocation Plain
-		Endif
+		NotEditWindow(m.tcInvocation)
 		Return
 	Endif
 
@@ -208,18 +205,12 @@ Procedure Autocomplete
 	*-----------------------------------------------------------------
 	lnEditSource = m.toISX.GetEditSource(m.lnWHandle)
 	If Not Inlist( m.lnEditSource, PRGFile, MenuCode, MethodCode, DBCCode, Iif(Wdockable('Command'), PRGFile, CommandWindow))
-		If Not Empty(m.tcInvocation)
-			Clear Typeahead
-			Keyboard '{Mouse}{Mouse}' + m.tcInvocation Plain
-		Endif
+		NotEditWindow(m.tcInvocation)
 		Return
 	Endif
 
 	If IsNameCharacter(m.toISX.cCharacterRight)
-		If Not Empty(m.tcInvocation)
-			Clear Typeahead
-			Keyboard '{Mouse}{Mouse}' + m.tcInvocation Plain
-		Endif
+		NotEditWindow(m.tcInvocation)
 		Return
 	Endif
 
@@ -280,6 +271,14 @@ Procedure Autocomplete
 
 	DisplayPopup(m.toISX)
 
+EndProc
+
+
+Procedure NotEditWindow(tcInvocation)
+	If Not Empty(m.tcInvocation)
+		Clear Typeahead
+		Keyboard m.tcInvocation Plain
+	Endif
 Endproc
  
 
@@ -1117,6 +1116,10 @@ Procedure GetAliasFor
 		Return m.lcResult
 	Endif
 
+	If m.toISX.nEditSource = CommandWindow
+		Return m.lcResult
+	Endif
+
 	lcAlias		  = RemoveMDot(m.tcAlias)
 	lnStart		  = 0
 	lnEnd		  = m.toISX.GetCurrentLine( m.toISX.nWHandle )
@@ -1124,7 +1127,8 @@ Procedure GetAliasFor
 	llTextBlockOK = .T.
 	lcAltResult	  = ''
 
-	lnLineCount = m.toISX.AGetLines(m.toISX.nWHandle, @m.laText, m.lnStart, m.lnEnd)
+	*** JRN 2023-12-22 : It will only read at most the first 64K characters
+	lnLineCount = m.toISX.AGetLines(m.toISX.nWHandle, @m.laText, Max(m.lnStart, m.lnEnd - 64000), m.lnEnd)
 	For lnCurrentLine = m.lnLineCount To 1 Step - 1
 		lcCurrentLine = m.laText[m.lnCurrentLine]
 		lcCommand	  = RemoveMDot(Alltrim(Getwordnum(m.lcCurrentLine, 1, '=('), ' ', Chr[9]))

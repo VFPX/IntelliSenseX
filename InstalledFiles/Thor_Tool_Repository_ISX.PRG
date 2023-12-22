@@ -46,6 +46,8 @@ Based on ISX.Prg by Christof
 		.ForumName = 'IntellisenseX'
 		.ForumLink = 'https://github.com/VFPX/IntellisenseX/issues'
 		
+		.MenuMarkExpression = [Not Empty(On('key', '.'))]
+		
 	Endwith
 
 	Return lxParam1
@@ -88,10 +90,13 @@ Procedure ToolCode
 			On Key Label . Do [&lcPRG] With 'VAR,OBJ,TABLE,THOR', '.'
 			Wait Window Nowait ccStarting 
 		Else
+			On Key Label .
 			Wait Window Nowait ccEnding 
 		Endif
 	Endif
 
+	ExecScript(_Screen.cThorDispatcher, 'THOR_PROC_FixThorMenuMarks')
+		
 Endproc
 
 ****************************************************************

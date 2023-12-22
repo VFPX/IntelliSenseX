@@ -1,8 +1,8 @@
 lparameters toUpdateObject
 
 with toUpdateObject
-	.VersionNumber    = '1.24.07 - 20231027'
-	.AvailableVersion = 'IntellisenseX-1.24.07-update-20231027'
+	.VersionNumber    = '1.25 - 20231222'
+	.AvailableVersion = 'IntellisenseX-1.25-update-20231222'
 	.Component        = 'No'
 	.Notes            = GetNotes()
 endwith
@@ -13,6 +13,12 @@ return toUpdateObject
 procedure GetNotes
 local lcNotes
 text to lcNotes noshow
+### 2023-12-22, Version 1.25 ###
+
+* Attempted fix to handle when dot is pressed not in a code window, eliminating the need for the timer altogether.
+* Fix bug to correctly toggle ISX by dot when not using timer.
+* Add hook so that Thor menus may show checkbox for ISX by dot when it is turned on (a feature for Thor suggested but not yet implemented).
+
 ### 2023-10-27, Version 1.24.07 ###
 
 * Expand column widths for 2nd / 3rd columns
