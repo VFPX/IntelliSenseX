@@ -1,3 +1,7 @@
+### 2024-03-06, Version 1.25.01 ###
+
+* Add in four Thor Proc files that had mysteriously disappeared.
+
 ### 2023-12-22, Version 1.25 ###
 
 * Attempted fix to handle when dot is pressed not in a code window, eliminating the need for the timer altogether (Issue #26).

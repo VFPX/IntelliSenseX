@@ -79,7 +79,7 @@ Procedure ToolCode
 
 	If _Screen.lThorDebuggerOpen && oddly named property, it means "close ISX when debugger is opened"
 		If Execscript(_Screen.cThorDispatcher, 'THOR_PROC_IntellisenseXTimer', 'Toggle')
-			Wait Window Nowait ccStarting at 10, 25
+			Wait Window Nowait ccStarting + ' (using timer)' at 10, 25
 		Else
 			Wait Window Nowait ccEnding at 10, 25
 		Endif
@@ -88,10 +88,10 @@ Procedure ToolCode
 		If Empty(m.lcOnKeyDot)
 			lcPRG = Execscript(_Screen.cThorDispatcher, 'Full Path=Thor_Proc_ISX')
 			On Key Label . Do [&lcPRG] With 'VAR,OBJ,TABLE,THOR', '.'
-			Wait Window Nowait ccStarting 
+			Wait Window Nowait ccStarting at 10, 25
 		Else
 			On Key Label .
-			Wait Window Nowait ccEnding 
+			Wait Window Nowait ccEnding at 10, 25
 		Endif
 	Endif
 

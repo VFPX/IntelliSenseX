@@ -32,7 +32,6 @@ Based on ISX.Prg by Christof
 		.Author			= 'Christof Wollenhaupt (enhancements for Thor by Jim Nelson)'
 		.Link	   = 'https://github.com/VFPX/IntelliSenseX/blob/master/documents/Tool_Dropdown_Aliases.md'
 		.OptionTool = 'IntellisenseX'
-		.OnKeyLabelOnly	= .T.
 
 	Endwith
 
@@ -53,7 +52,7 @@ Return
 Procedure ToolCode
 	Lparameters lxParam1
 
-Local laList[1], laUsed[1], lcAlias, lcExt, lnCount, lnI, loFixCase
+	Local laList[1], laUsed[1], lcAlias, lcExt, lnCount, lnI, loFixCase
 
 	lnCount = Aused(laUsed)
 
@@ -66,8 +65,14 @@ Local laList[1], laUsed[1], lcAlias, lcExt, lnCount, lnI, loFixCase
 		For lnI = 1 To m.lnCount
 			lcAlias			 = m.laUsed[m.lnI, 1]
 			laList[m.lnI, 1] = Evl(m.loFixCase.FixCase(m.lcAlias, .T.), m.lcAlias)
-			lcExt = Upper(JustExt(Dbf(m.lcAlias)))
-			laList[m.lnI, 2] = Icase(lcExt = 'DBF', 'Table', lcExt = 'PJX', 'Project (as Table)', 'Cursor')
+			lcExt			 = Upper(Justext(Dbf(m.lcAlias)))
+			laList[m.lnI, 2] = Icase(					;
+				  m.lcExt = 'DBF', '',					;
+				  m.lcExt = 'PJX', 'Project',			;
+				  m.lcExt = 'SCX', 'Form',				;
+				  m.lcExt = 'VCX', 'Class Lib',			;
+				  m.lcExt = 'FRX', 'Report',			;
+				  'Cursor')
 		Endfor
 
 		Execscript (_Screen.cThorDispatcher, 'Thor_Proc_DropDown', @m.laList)
