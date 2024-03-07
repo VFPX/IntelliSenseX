@@ -1008,7 +1008,13 @@ Procedure CP_AllNames
 					lcAlias			 = m.laUsed[m.lnI, 1]
 					laList[m.lnI, 1] = Evl(m.loFixCase.FixCase(m.lcAlias, .T.), m.lcAlias)
 					lcExt			 = Upper(Justext(Dbf(m.lcAlias)))
-					laList[m.lnI, 2] = Icase(m.lcExt = 'DBF', 'Table', m.lcExt = 'PJX', 'Project (as Table)', 'Cursor')
+					laList[m.lnI, 2] = Icase(					;
+						  m.lcExt = 'DBF', '',					;
+						  m.lcExt = 'PJX', 'Project',			;
+						  m.lcExt = 'SCX', 'Form',				;
+						  m.lcExt = 'VCX', 'Class Lib',			;
+						  m.lcExt = 'FRX', 'Report',			;
+						  'Cursor')
 				Endfor
 				toISX.NCount = m.lnCount
 				Dimension m.toISX.aList[1]
